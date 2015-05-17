@@ -1,0 +1,70 @@
+﻿@using Tattoo.Common.Enumerations
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="col-md-4">
+            <div class="navbar-header">
+                <h1>
+                    <a href="@Url.Action("Index","Home")" class="header-logo">
+                        TtoosPierc > <small><small>Social Art Corporal</small></small>
+                    </a>
+                </h1>
+            </div>
+        </div>
+
+        <div class="col-md-4 center-block">
+            <div class="menu-center-link">
+                <div class="menu-center-top menu-primary"></div>
+                <div class="menu-center-bottom menu-primary">
+                    <a href="#">@Resources.Menu_Blog</a>
+                </div>
+            </div>
+            <div class="menu-center-link">
+                <div class="menu-center-top menu-danger"></div>
+                <div class="menu-center-bottom menu-danger">@Resources.Menu_Forum</div>
+            </div>
+            <div class="menu-center-link">
+                <div class="menu-center-top menu-warning"></div>
+                <div class="menu-center-bottom menu-warning">
+                    <a href="@Url.Action("Index", "Home")">@Resources.Menu_Gallery</a>
+                </div>
+            </div>
+            <div class="menu-center-link">
+                <div class="menu-center-top menu-success"></div>
+                <div class="menu-center-bottom menu-success">@Resources.Menu_Social</div>
+            </div>
+        </div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-collapse collapse pull-right">
+            <br />
+            <ul class="nav navbar-nav">
+                @if (@User.IsInRole(Role.User.ToString()))
+                {
+                }
+
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">@FontAwesomeIconSet.Cogs.FixedWidth().Html Admin @FontAwesomeIconSet.CaretDown.FixedWidth().Html</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="@Url.Action("Index", "Users", new {area = "Admin"})">@FontAwesomeIconSet.Users.FixedWidth().Html Manage Users</a></li>
+                        <li><a href="@Url.Action("Index", "BodyZone", new {area = ""})">@FontAwesomeIconSet.Tags.FixedWidth().Html @Resources.Menu_BodyZone</a></li>
+                        <li class="divider"></li>
+                        <li><a href="@Url.Action("Index", "Position", new {area = ""})">@FontAwesomeIconSet.Tags.FixedWidth().Html @Resources.Menu_Position</a></li>
+                        <li class="divider"></li>
+                        <li><a href="@Url.RouteUrl("Elmah")">@FontAwesomeIconSet.Bug.FixedWidth().Html Errors Report</a></li>
+                        <li class="divider"></li>
+                        <li><a href="@Url.Action("Index", "Element", new {area = ""})">@FontAwesomeIconSet.Tags.FixedWidth().Html Manage Element</a></li>
+                        <li><a href="@Url.Action("Index", "Comment", new {area = ""})">@FontAwesomeIconSet.Tags.FixedWidth().Html Manage Comments</a></li>
+                        <li><a href="@Url.Action("Index", "Notice", new {area = ""})">@FontAwesomeIconSet.Tags.FixedWidth().Html Manage Notices</a></li>
+                    </ul>
+                </li>
+
+                @Html.Partial("_LoginPartial")
+
+                @Html.Partial("_LanguageSelector")
+            </ul>
+        </div>
+    </div>
+</div>

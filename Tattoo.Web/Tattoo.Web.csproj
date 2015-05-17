@@ -1,0 +1,1220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AB56E649-F06F-4E8B-ACF6-15FAD6BE77A9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tattoo.Web</RootNamespace>
+    <AssemblyName>Tattoo.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac">
+      <HintPath>..\packages\Autofac.3.4.0\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=3.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.Mvc5.3.3.0\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4">
+      <HintPath>..\packages\AutoMapper.3.2.1\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah">
+      <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="Elmah.Mvc">
+      <HintPath>..\packages\Elmah.MVC.2.1.1\lib\net40\Elmah.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\packages\FluentValidation.5.3.0.0\lib\Net40\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation.Mvc">
+      <HintPath>..\packages\FluentValidation.MVC5.5.1.0.0\lib\Net45\FluentValidation.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageResizer">
+      <HintPath>..\packages\ImageResizer.3.4.3\lib\ImageResizer.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageResizer.FluentExtensions">
+      <HintPath>..\packages\ImageResizer.FluentExtensions.1.0.0.4\lib\ImageResizer.FluentExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ImageResizer.FluentExtensions.Mvc">
+      <HintPath>..\packages\ImageResizer.FluentExtensions.Mvc.1.0.0.4\lib\ImageResizer.FluentExtensions.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageResizer.Mvc">
+      <HintPath>..\packages\ImageResizer.Mvc.3.4.3\lib\ImageResizer.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Mvc.Mailer">
+      <HintPath>..\packages\MvcMailer.4.5\lib\45\Mvc.Mailer.dll</HintPath>
+    </Reference>
+    <Reference Include="Mvc.RazorTools">
+      <HintPath>..\packages\Mvc.RazorTools.Base.1.0.5\lib\net45\Mvc.RazorTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Mvc.RazorTools.FontAwesome">
+      <HintPath>..\packages\Mvc.RazorTools.FontAwesome.4.0.3.10\lib\net45\Mvc.RazorTools.FontAwesome.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="SoftPool.Cryptography">
+      <HintPath>..\packages\SoftPool.Cryptography.1.1.5142.19090\lib\net45\SoftPool.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.92.0\lib\net451\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.1\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.1\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="WebActivatorEx">
+      <HintPath>..\packages\WebActivatorEx.2.0.5\lib\net40\WebActivatorEx.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\AppUtilities.cs" />
+    <Compile Include="App_Start\Bootstrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\Razor Tools\FontAwesome.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\UsersController.cs" />
+    <Compile Include="Areas\Admin\Models\UserModels.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BodyZoneController.cs" />
+    <Compile Include="Controllers\CommentController.cs" />
+    <Compile Include="Controllers\ElementController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NoticeController.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controllers\PositionController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Mailers\AppMailer.cs" />
+    <Compile Include="Mailers\IAppMailer.cs" />
+    <Compile Include="Mappings\AutoMapperSetup.cs" />
+    <Compile Include="Mappings\VM2DomainMappingProfile.cs" />
+    <Compile Include="Mappings\D2VModelMappingProfile.cs" />
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\AlertPartialViewModel.cs" />
+    <Compile Include="Models\BodyZoneModels.cs" />
+    <Compile Include="Models\CommentModels.cs" />
+    <Compile Include="Models\DashboardViewModel.cs" />
+    <Compile Include="Models\ElementModels.cs" />
+    <Compile Include="Models\JsonModels.cs" />
+    <Compile Include="Models\NoticeModels.cs" />
+    <Compile Include="Models\PositionModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Validation\AccountValidators\LoginModelValidator.cs" />
+    <Compile Include="Validation\AccountValidators\PasswordRecoveryValidator.cs" />
+    <Compile Include="Validation\AutofacValidatorFactory.cs" />
+    <Compile Include="Validation\ManagementValidators\PositionValidator.cs" />
+    <Compile Include="Validation\ValidationModule.cs" />
+    <Compile Include="Validation\AccountValidators\RegisterModelValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\app-styles.css" />
+    <Content Include="Content\app-styles.min.css">
+      <DependentUpon>app-styles.css</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap-countrypicker.min.css">
+      <DependentUpon>bootstrap-countrypicker.css</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap-datetimepicker.css" />
+    <Content Include="Content\bootstrap-datetimepicker.min.css">
+      <DependentUpon>bootstrap-datetimepicker.css</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap-countrypicker.css" />
+    <Content Include="Content\bootstrap-theme.min.css">
+      <DependentUpon>bootstrap-theme.css</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css">
+      <DependentUpon>bootstrap.css</DependentUpon>
+    </Content>
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.autoFill.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.autoFill.min.css">
+      <DependentUpon>dataTables.autoFill.css</DependentUpon>
+    </Content>
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.bootstrap.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.bootstrap.min.css">
+      <DependentUpon>dataTables.bootstrap.css</DependentUpon>
+    </Content>
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.colReorder.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.colReorder.min.css">
+      <DependentUpon>dataTables.colReorder.css</DependentUpon>
+    </Content>
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.colVis.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.colvis.jqueryui.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.colvis.jqueryui.min.css">
+      <DependentUpon>dataTables.colvis.jqueryui.css</DependentUpon>
+    </Content>
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.colVis.min.css">
+      <DependentUpon>dataTables.colVis.css</DependentUpon>
+    </Content>
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.fixedColumns.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.fixedColumns.min.css">
+      <DependentUpon>dataTables.fixedColumns.css</DependentUpon>
+    </Content>
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.fixedHeader.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.fixedHeader.min.css">
+      <DependentUpon>dataTables.fixedHeader.css</DependentUpon>
+    </Content>
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.foundation.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.foundation.min.css">
+      <DependentUpon>dataTables.foundation.css</DependentUpon>
+    </Content>
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.jqueryui.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.jqueryui.min.css">
+      <DependentUpon>dataTables.jqueryui.css</DependentUpon>
+    </Content>
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.keyTable.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.keyTable.min.css">
+      <DependentUpon>dataTables.keyTable.css</DependentUpon>
+    </Content>
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.scroller.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.scroller.min.css">
+      <DependentUpon>dataTables.scroller.css</DependentUpon>
+    </Content>
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.tableTools.css" />
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.tableTools.min.css">
+      <DependentUpon>dataTables.tableTools.css</DependentUpon>
+    </Content>
+    <Content Include="Content\DataTables-1.10.0\css\jquery.dataTables.css" />
+    <Content Include="Content\DataTables-1.10.0\css\jquery.dataTables.min.css">
+      <DependentUpon>jquery.dataTables.css</DependentUpon>
+    </Content>
+    <Content Include="Content\DataTables-1.10.0\css\jquery.dataTables_themeroller.css" />
+    <Content Include="Content\DataTables-1.10.0\css\jquery.dataTables_themeroller.min.css">
+      <DependentUpon>jquery.dataTables_themeroller.css</DependentUpon>
+    </Content>
+    <Content Include="Content\DataTables-1.10.0\images\background.png" />
+    <Content Include="Content\DataTables-1.10.0\images\back_disabled.png" />
+    <Content Include="Content\DataTables-1.10.0\images\back_enabled.png" />
+    <Content Include="Content\DataTables-1.10.0\images\back_enabled_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\images\collection.png" />
+    <Content Include="Content\DataTables-1.10.0\images\collection_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\images\copy.png" />
+    <Content Include="Content\DataTables-1.10.0\images\copy_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\images\csv.png" />
+    <Content Include="Content\DataTables-1.10.0\images\csv_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\images\filler.png" />
+    <Content Include="Content\DataTables-1.10.0\images\forward_disabled.png" />
+    <Content Include="Content\DataTables-1.10.0\images\forward_enabled.png" />
+    <Content Include="Content\DataTables-1.10.0\images\forward_enabled_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\images\insert.png" />
+    <Content Include="Content\DataTables-1.10.0\images\loading-background.png" />
+    <Content Include="Content\DataTables-1.10.0\images\pdf.png" />
+    <Content Include="Content\DataTables-1.10.0\images\pdf_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\images\print.png" />
+    <Content Include="Content\DataTables-1.10.0\images\print_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\images\sort_asc.png" />
+    <Content Include="Content\DataTables-1.10.0\images\sort_asc_disabled.png" />
+    <Content Include="Content\DataTables-1.10.0\images\sort_both.png" />
+    <Content Include="Content\DataTables-1.10.0\images\sort_desc.png" />
+    <Content Include="Content\DataTables-1.10.0\images\sort_desc_disabled.png" />
+    <Content Include="Content\DataTables-1.10.0\images\xls.png" />
+    <Content Include="Content\DataTables-1.10.0\images\xls_hover.png" />
+    <Content Include="Content\DataTables-1.10.0\swf\copy_csv_xls.swf" />
+    <Content Include="Content\DataTables-1.10.0\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css">
+      <DependentUpon>font-awesome.css</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\Images\Avatars\Default\avatar_default.png" />
+    <Content Include="Content\Images\Flags\countries.flags.png" />
+    <Content Include="Content\Images\Flags\en.24.png" />
+    <Content Include="Content\Images\Flags\es.24.png" />
+    <Content Include="Content\Images\Flags\es.png" />
+    <Content Include="Content\Images\Flags\en.png" />
+    <Content Include="Content\Images\LogoHealthMax.png" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\PagedList.min.css">
+      <DependentUpon>PagedList.css</DependentUpon>
+    </Content>
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.min.css">
+      <DependentUpon>toastr.css</DependentUpon>
+    </Content>
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="log4net.config" />
+    <Content Include="Scripts\app-scripts.js" />
+    <Content Include="Scripts\app-scripts.min.js">
+      <DependentUpon>app-scripts.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bootbox.js" />
+    <Content Include="Scripts\bootbox.min.js">
+      <DependentUpon>bootbox.js</DependentUpon>
+    </Content>
+    <Content Include="Content\toastr.scss">
+      <DependentUpon>toastr.css</DependentUpon>
+    </Content>
+    <Content Include="Content\toastr.less">
+      <DependentUpon>toastr.css</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap.css.map">
+      <DependentUpon>bootstrap.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bootstrap-countrypicker.js" />
+    <Content Include="Scripts\bootstrap-countrypicker.min.js">
+      <DependentUpon>bootstrap-countrypicker.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bootstrap-datetimepicker-loader.min.js">
+      <DependentUpon>bootstrap-datetimepicker-loader.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js">
+      <DependentUpon>bootstrap-datetimepicker.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js.map">
+      <DependentUpon>bootstrap-datetimepicker.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bootstrap-datetimepicker-loader.min.js.map">
+      <DependentUpon>bootstrap-datetimepicker-loader.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\app-scripts.min.js.map">
+      <DependentUpon>app-scripts.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bootstrap.validate.js" />
+    <Content Include="Scripts\bootstrap.validate.min.js">
+      <DependentUpon>bootstrap.validate.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.autoFill.js" />
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.autoFill.min.js">
+      <DependentUpon>dataTables.autoFill.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.bootstrap.js" />
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.bootstrap.min.js">
+      <DependentUpon>dataTables.bootstrap.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.colReorder.js" />
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.colReorder.min.js">
+      <DependentUpon>dataTables.colReorder.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.colVis.js" />
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.colVis.min.js">
+      <DependentUpon>dataTables.colVis.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.fixedColumns.js" />
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.fixedColumns.min.js">
+      <DependentUpon>dataTables.fixedColumns.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.fixedHeader.js" />
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.fixedHeader.min.js">
+      <DependentUpon>dataTables.fixedHeader.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.foundation.js" />
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.foundation.min.js">
+      <DependentUpon>dataTables.foundation.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.jqueryui.js" />
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.jqueryui.min.js">
+      <DependentUpon>dataTables.jqueryui.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.keyTable.js" />
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.keyTable.min.js">
+      <DependentUpon>dataTables.keyTable.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.scroller.js" />
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.scroller.min.js">
+      <DependentUpon>dataTables.scroller.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.tableTools.js" />
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.tableTools.min.js">
+      <DependentUpon>dataTables.tableTools.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\jquery.dataTables.js" />
+    <Content Include="Scripts\DataTables-1.10.0\jquery.dataTables.min.js">
+      <DependentUpon>jquery.dataTables.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\excanvas.js" />
+    <Content Include="Scripts\flot\excanvas.min.js">
+      <DependentUpon>excanvas.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.colorhelpers.js" />
+    <Content Include="Scripts\flot\jquery.colorhelpers.min.js">
+      <DependentUpon>jquery.colorhelpers.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.canvas.js" />
+    <Content Include="Scripts\flot\jquery.flot.canvas.min.js">
+      <DependentUpon>jquery.flot.canvas.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.categories.js" />
+    <Content Include="Scripts\flot\jquery.flot.categories.min.js">
+      <DependentUpon>jquery.flot.categories.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.crosshair.js" />
+    <Content Include="Scripts\flot\jquery.flot.crosshair.min.js">
+      <DependentUpon>jquery.flot.crosshair.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.errorbars.js" />
+    <Content Include="Scripts\flot\jquery.flot.errorbars.min.js">
+      <DependentUpon>jquery.flot.errorbars.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.fillbetween.js" />
+    <Content Include="Scripts\flot\jquery.flot.fillbetween.min.js">
+      <DependentUpon>jquery.flot.fillbetween.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.image.js" />
+    <Content Include="Scripts\flot\jquery.flot.image.min.js">
+      <DependentUpon>jquery.flot.image.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.js" />
+    <Content Include="Scripts\flot\jquery.flot.min.js">
+      <DependentUpon>jquery.flot.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.navigate.js" />
+    <Content Include="Scripts\flot\jquery.flot.navigate.min.js">
+      <DependentUpon>jquery.flot.navigate.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.pie.js" />
+    <Content Include="Scripts\flot\jquery.flot.pie.min.js">
+      <DependentUpon>jquery.flot.pie.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.resize.js" />
+    <Content Include="Scripts\flot\jquery.flot.resize.min.js">
+      <DependentUpon>jquery.flot.resize.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.selection.js" />
+    <Content Include="Scripts\flot\jquery.flot.selection.min.js">
+      <DependentUpon>jquery.flot.selection.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.stack.js" />
+    <Content Include="Scripts\flot\jquery.flot.stack.min.js">
+      <DependentUpon>jquery.flot.stack.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.symbol.js" />
+    <Content Include="Scripts\flot\jquery.flot.symbol.min.js">
+      <DependentUpon>jquery.flot.symbol.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.threshold.js" />
+    <Content Include="Scripts\flot\jquery.flot.threshold.min.js">
+      <DependentUpon>jquery.flot.threshold.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.time.js" />
+    <Content Include="Scripts\flot\jquery.flot.time.min.js">
+      <DependentUpon>jquery.flot.time.js</DependentUpon>
+    </Content>
+    <Content Include="Content\DataTables-1.10.0\css\dataTables.jqueryui.scss" />
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.foundation.min.js.map">
+      <DependentUpon>dataTables.foundation.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.jqueryui.min.js.map">
+      <DependentUpon>dataTables.jqueryui.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.bootstrap.min.js.map">
+      <DependentUpon>dataTables.bootstrap.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.colReorder.min.js.map">
+      <DependentUpon>dataTables.colReorder.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.fixedColumns.min.js.map">
+      <DependentUpon>dataTables.fixedColumns.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.tableTools.min.js.map">
+      <DependentUpon>dataTables.tableTools.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.canvas.min.js.map">
+      <DependentUpon>jquery.flot.canvas.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.fillbetween.min.js.map">
+      <DependentUpon>jquery.flot.fillbetween.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.min.js.map">
+      <DependentUpon>jquery.flot.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.navigate.min.js.map">
+      <DependentUpon>jquery.flot.navigate.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.resize.min.js.map">
+      <DependentUpon>jquery.flot.resize.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.selection.min.js.map">
+      <DependentUpon>jquery.flot.selection.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.stack.min.js.map">
+      <DependentUpon>jquery.flot.stack.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.image.min.js.map">
+      <DependentUpon>jquery.flot.image.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.colVis.min.js.map">
+      <DependentUpon>dataTables.colVis.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.keyTable.min.js.map">
+      <DependentUpon>dataTables.keyTable.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.time.min.js.map">
+      <DependentUpon>jquery.flot.time.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\excanvas.min.js.map">
+      <DependentUpon>excanvas.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.errorbars.min.js.map">
+      <DependentUpon>jquery.flot.errorbars.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.fixedHeader.min.js.map">
+      <DependentUpon>dataTables.fixedHeader.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.pie.min.js.map">
+      <DependentUpon>jquery.flot.pie.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.crosshair.min.js.map">
+      <DependentUpon>jquery.flot.crosshair.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.autoFill.min.js.map">
+      <DependentUpon>dataTables.autoFill.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.symbol.min.js.map">
+      <DependentUpon>jquery.flot.symbol.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\jquery.dataTables.min.js.map">
+      <DependentUpon>jquery.dataTables.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\DataTables-1.10.0\dataTables.scroller.min.js.map">
+      <DependentUpon>dataTables.scroller.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.categories.min.js.map">
+      <DependentUpon>jquery.flot.categories.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.colorhelpers.min.js.map">
+      <DependentUpon>jquery.colorhelpers.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\flot\jquery.flot.threshold.min.js.map">
+      <DependentUpon>jquery.flot.threshold.min.js</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-2.1.1.intellisense.js">
+      <DependentUpon>jquery-2.1.1.js</DependentUpon>
+    </None>
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js">
+      <DependentUpon>jquery-2.1.1.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js">
+      <DependentUpon>jquery.validate.unobtrusive.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\jquery.tinymce.min.js" />
+    <Content Include="Scripts\tinymce\license.txt" />
+    <Content Include="Scripts\tinymce\plugins\advlist\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\advlist\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\anchor\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\anchor\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\autolink\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\autolink\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\autoresize\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\autoresize\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\autosave\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\autosave\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\bbcode\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\bbcode\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\charmap\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\charmap\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\code\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\code\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\css\dialog.css" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\img\buttons.png" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\img\icons.gif" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\img\items.gif" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\img\menu_arrow.gif" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\img\menu_check.gif" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\img\progress.gif" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\img\tabs.gif" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\tiny_mce_popup.js" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\utils\editable_selects.js" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\utils\form_utils.js" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\utils\mctabs.js" />
+    <Content Include="Scripts\tinymce\plugins\compat3x\utils\validate.js" />
+    <Content Include="Scripts\tinymce\plugins\contextmenu\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\contextmenu\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\directionality\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\directionality\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-cool.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-cry.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-embarassed.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-foot-in-mouth.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-frown.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-innocent.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-kiss.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-laughing.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-money-mouth.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-sealed.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-smile.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-surprised.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-tongue-out.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-undecided.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-wink.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\img\smiley-yell.gif" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\emoticons\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\example\dialog.html" />
+    <Content Include="Scripts\tinymce\plugins\example\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\example\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\example_dependency\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\example_dependency\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\fullpage\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\fullpage\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\fullscreen\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\fullscreen\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\hr\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\hr\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\image\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\image\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\importcss\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\importcss\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\insertdatetime\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\insertdatetime\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\layer\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\layer\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\legacyoutput\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\legacyoutput\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\link\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\link\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\lists\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\lists\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\media\moxieplayer.swf" />
+    <Content Include="Scripts\tinymce\plugins\media\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\media\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\nonbreaking\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\nonbreaking\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\noneditable\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\noneditable\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\pagebreak\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\pagebreak\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\paste\classes\Clipboard.js" />
+    <Content Include="Scripts\tinymce\plugins\paste\classes\Plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\paste\classes\Quirks.js" />
+    <Content Include="Scripts\tinymce\plugins\paste\classes\Utils.js" />
+    <Content Include="Scripts\tinymce\plugins\paste\classes\WordFilter.js" />
+    <Content Include="Scripts\tinymce\plugins\paste\plugin.dev.js" />
+    <Content Include="Scripts\tinymce\plugins\paste\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\paste\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\preview\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\preview\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\print\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\print\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\save\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\save\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\searchreplace\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\searchreplace\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\spellchecker\classes\DomTextMatcher.js" />
+    <Content Include="Scripts\tinymce\plugins\spellchecker\classes\Plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\spellchecker\plugin.dev.js" />
+    <Content Include="Scripts\tinymce\plugins\spellchecker\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\spellchecker\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\tabfocus\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\tabfocus\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\table\classes\CellSelection.js" />
+    <Content Include="Scripts\tinymce\plugins\table\classes\Plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\table\classes\Quirks.js" />
+    <Content Include="Scripts\tinymce\plugins\table\classes\TableGrid.js" />
+    <Content Include="Scripts\tinymce\plugins\table\plugin.dev.js" />
+    <Content Include="Scripts\tinymce\plugins\table\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\table\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\template\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\template\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\textcolor\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\textcolor\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\css\visualblocks.css" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\address.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\article.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\aside.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\blockquote.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\div.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\dl.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\figure.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\h1.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\h2.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\h3.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\h4.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\h5.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\h6.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\hgroup.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\ol.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\p.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\pre.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\section.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\img\ul.gif" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\visualblocks\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\visualchars\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\visualchars\plugin.min.js" />
+    <Content Include="Scripts\tinymce\plugins\wordcount\plugin.js" />
+    <Content Include="Scripts\tinymce\plugins\wordcount\plugin.min.js" />
+    <Content Include="Scripts\tinymce\skins\lightgray\content.inline.min.css">
+      <DependentUpon>content.min.css</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\skins\lightgray\content.min.css" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.svg" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.svg" />
+    <Content Include="Scripts\tinymce\skins\lightgray\img\anchor.gif" />
+    <Content Include="Scripts\tinymce\skins\lightgray\img\loader.gif" />
+    <Content Include="Scripts\tinymce\skins\lightgray\img\object.gif" />
+    <Content Include="Scripts\tinymce\skins\lightgray\img\trans.gif" />
+    <Content Include="Scripts\tinymce\skins\lightgray\skin.ie7.min.css" />
+    <Content Include="Scripts\tinymce\skins\lightgray\skin.min.css" />
+    <Content Include="Scripts\tinymce\themes\modern\theme.js" />
+    <Content Include="Scripts\tinymce\themes\modern\theme.min.js">
+      <DependentUpon>theme.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\tinymce.js" />
+    <Content Include="Scripts\tinymce\tinymce.min.js">
+      <DependentUpon>tinymce.js</DependentUpon>
+    </Content>
+    <Content Include="Views\Element\_ElementList.cshtml" />
+    <Content Include="Views\Shared\ErrorVerification.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="x64\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="x86\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\JsonData\countries.json" />
+    <Content Include="Scripts\bootstrap.validate.min.js.map">
+      <DependentUpon>bootstrap.validate.min.js</DependentUpon>
+    </Content>
+    <Content Include="fonts\OpenSans-Bold.ttf" />
+    <Content Include="fonts\OpenSans-Regular.ttf" />
+    <Content Include="Scripts\bootstrap-countrypicker.min.js.map">
+      <DependentUpon>bootstrap-countrypicker.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bootbox.min.js.map">
+      <DependentUpon>bootbox.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bootstrap.min.js.map">
+      <DependentUpon>bootstrap.min.js</DependentUpon>
+    </Content>
+    <Content Include="Content\JsonData\states.json" />
+    <Content Include="Content\JsonData\phone-codes.json" />
+    <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Users\_UsersList.cshtml" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
+    <Content Include="fonts\BeyondWonderland.ttf" />
+    <None Include="Properties\PublishProfiles\HealthMax.pubxml" />
+    <Content Include="Scripts\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js">
+      <DependentUpon>bootstrap.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\bootstrap-datetimepicker-loader.js" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Scripts\jquery.blockUI.min.js">
+      <DependentUpon>jquery.blockUI.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js">
+      <DependentUpon>jquery.unobtrusive-ajax.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.blockUI.min.js.map">
+      <DependentUpon>jquery.blockUI.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js.map">
+      <DependentUpon>jquery.unobtrusive-ajax.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery-2.1.1.min.map">
+      <DependentUpon>jquery-2.1.1.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery-2.1.1.min.js.map">
+      <DependentUpon>jquery-2.1.1.min.js</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery.validate-vsdoc.js">
+      <DependentUpon>jquery.validate.js</DependentUpon>
+    </None>
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js">
+      <DependentUpon>jquery.validate.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\knockout-3.1.0.debug.js">
+      <DependentUpon>knockout-3.1.0.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\knockout-3.1.0.js" />
+    <Content Include="Scripts\knockout.mapping-latest.debug.js">
+      <DependentUpon>knockout.mapping-latest.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\knockout.mapping-latest.js" />
+    <Content Include="Scripts\modernizr-2.7.1.js" />
+    <Content Include="Scripts\modernizr-2.7.1.min.js">
+      <DependentUpon>modernizr-2.7.1.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\moment-with-langs.js" />
+    <Content Include="Scripts\moment-with-langs.min.js">
+      <DependentUpon>moment-with-langs.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js">
+      <DependentUpon>moment.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js">
+      <DependentUpon>respond.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js">
+      <DependentUpon>toastr.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Shared\Error404.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\_RemoveAccountPartial.cshtml" />
+    <Content Include="Views\Account\_SetPasswordPartial.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Manage.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Scripts\modernizr-2.7.1.min.js.map">
+      <DependentUpon>modernizr-2.7.1.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\toastr.min.js.map">
+      <DependentUpon>toastr.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\moment-with-langs.min.js.map">
+      <DependentUpon>moment-with-langs.min.js</DependentUpon>
+    </Content>
+    <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
+    <Content Include="Views\Account\Users.cshtml" />
+    <Content Include="Views\Shared\_Navigator.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+    <Content Include="Views\Shared\_Alert.cshtml" />
+    <Content Include="Views\AppMailer\_Layout.cshtml" />
+    <Content Include="Views\AppMailer\VerifyEmail.cshtml" />
+    <Content Include="Views\Account\_SecurityConsiderations.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\_Boolean.cshtml" />
+    <Content Include="Views\Position\Index.cshtml" />
+    <Content Include="Views\Position\_PositionsList.cshtml" />
+    <Content Include="Views\Position\Create.cshtml" />
+    <Content Include="Views\Position\Edit.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Boolean.cshtml" />
+    <Content Include="Scripts\jquery.validate.min.js.map">
+      <DependentUpon>jquery.validate.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\moment.min.js.map">
+      <DependentUpon>moment.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\respond.min.js.map">
+      <DependentUpon>respond.min.js</DependentUpon>
+    </Content>
+    <Content Include="Views\Account\AccountVerification.cshtml" />
+    <Content Include="Views\Account\Registered.cshtml" />
+    <Content Include="Views\Manage\Dashboard.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\ApplicationStatus.cshtml" />
+    <Content Include="Views\Account\PasswordRecovery.cshtml" />
+    <Content Include="Views\Account\PasswordChanged.cshtml" />
+    <Content Include="Views\AppMailer\NewPassword.cshtml" />
+    <Content Include="Views\AppMailer\StatusChange.cshtml" />
+    <Content Include="Views\BodyZone\Index.cshtml" />
+    <Content Include="Views\BodyZone\_BodyZoneList.cshtml" />
+    <Content Include="Views\Shared\_LanguageSelector.cshtml" />
+    <Content Include="Views\BodyZone\Create.cshtml" />
+    <Content Include="Views\BodyZone\Edit.cshtml" />
+    <Content Include="Views\Position\Test.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\_TinyMCE.cshtml" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.woff" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.ttf" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.json" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce-small.eot" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.ttf" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.json" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\tinymce.eot" />
+    <Content Include="Scripts\tinymce\skins\lightgray\fonts\readme.md" />
+    <Content Include="Scripts\tinymce\langs\readme.md" />
+    <Content Include="Views\Shared\DisplayTemplates\ElementViewModel.cshtml" />
+    <Content Include="Views\Element\Create.cshtml" />
+    <Content Include="Views\Position\List.cshtml" />
+    <Content Include="Views\Element\Details.cshtml" />
+    <Content Include="Views\Comment\Index.cshtml" />
+    <Content Include="Views\Element\Index.cshtml" />
+    <Content Include="Views\Comment\_CommentsList.cshtml" />
+    <Content Include="Views\Comment\Create.cshtml" />
+    <Content Include="Views\Account\UpdateProfile.cshtml" />
+    <Content Include="Views\Comment\_CommentsListForCreate.cshtml" />
+    <Content Include="Views\Shared\_AsideLeft.cshtml" />
+    <Content Include="Views\Element\Edit.cshtml" />
+    <Content Include="Scripts\tinymce\plugins\advlist\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\autolink\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\autoresize\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\autosave\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\bbcode\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\charmap\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\code\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\compat3x\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\emoticons\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\example\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\fullscreen\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\image\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\insertdatetime\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\layer\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\legacyoutput\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\link\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\lists\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\media\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\nonbreaking\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\noneditable\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\pagebreak\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\paste\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\preview\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\print\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\save\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\searchreplace\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\spellchecker\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\tabfocus\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\table\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\template\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\textcolor\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\visualblocks\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\visualchars\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\wordcount\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\contextmenu\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\directionality\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\importcss\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\example_dependency\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js.map">
+      <DependentUpon>jquery.validate.unobtrusive.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\fullpage\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\anchor\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\plugins\hr\plugin.min.js.map">
+      <DependentUpon>plugin.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\themes\modern\theme.min.js.map">
+      <DependentUpon>theme.min.js</DependentUpon>
+    </Content>
+    <Content Include="Scripts\tinymce\tinymce.min.js.map">
+      <DependentUpon>tinymce.min.js</DependentUpon>
+    </Content>
+    <Content Include="Views\Notice\Create.cshtml" />
+    <Content Include="Views\Notice\Index.cshtml" />
+    <Content Include="Views\Notice\_NoticeList.cshtml" />
+    <Content Include="Views\Notice\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\WebSite.Logs\" />
+    <Folder Include="Content\Images\Elements\" />
+    <Folder Include="Content\Uploads\" />
+    <Folder Include="Views\Default\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tattoo.Common\Tattoo.Common.csproj">
+      <Project>{5354ad07-8f41-4434-b122-429476c947be}</Project>
+      <Name>Tattoo.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tattoo.Data\Tattoo.Data.csproj">
+      <Project>{1D11E8CC-5880-48BF-98D5-106EEEE7F0E8}</Project>
+      <Name>Tattoo.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tattoo.Service\Tattoo.Service.csproj">
+      <Project>{7C5DBF54-FE63-43FC-B5F0-66E670B87063}</Project>
+      <Name>Tattoo.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tattoo.Web.Core\Tattoo.Web.Core.csproj">
+      <Project>{B3BA8A31-6C98-4551-AE76-4B2A600FF263}</Project>
+      <Name>Tattoo.Web.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1061</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3180/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets" Condition="Exists('..\packages\AutoMapper.3.2.1\tools\AutoMapper.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,9 @@
+﻿@using ImageResizer.FluentExtensions
+@using ImageResizer.FluentExtensions.Mvc
+<li class="dropdown">
+    <a href="" class="dropdown-toggle" data-toggle="dropdown"><img alt="flag" src="@Url.ImageUrl(string.Format("~/Content/Images/Flags/{0}.24.png", UICulture.Contains("-") ? UICulture.Remove(UICulture.IndexOf('-')) : UICulture), x => x.Resize(img => img.Dimensions(19, 19).ScaleBoth()))" /> @FontAwesomeIconSet.CaretDown.FixedWidth().Html</a>
+    <ul class="dropdown-menu">
+        <li><a href="@Url.Action("SetCulture", "Home", new {area = "", culture = "en"})"><img alt="flag" src="@Url.Content("~/Content/Images/Flags/en.png")" /> @Resources.Menu_LanguageEn</a></li>
+        <li><a href="@Url.Action("SetCulture", "Home", new {area = "", culture = "es"})"><img alt="flag" src="@Url.Content("~/Content/Images/Flags/es.png")" /> @Resources.Menu_LanguageEs</a></li>
+    </ul>
+</li>

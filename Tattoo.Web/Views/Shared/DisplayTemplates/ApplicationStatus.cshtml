@@ -1,0 +1,20 @@
+﻿@using Tattoo.Common.Enumerations
+@model Tattoo.Common.Enumerations.ApplicationStatus
+
+@{
+    switch (Model)
+    {
+        case ApplicationStatus.InProgress:
+            @FontAwesomeIconSet.Pencil.FixedWidth().Html
+            break;
+        case ApplicationStatus.Completed:
+            @FontAwesomeIconSet.Square.FixedWidth().Html
+            break;
+        case ApplicationStatus.Processed:
+            @FontAwesomeIconSet.CheckSquare.FixedWidth().Html
+            break;
+        default:
+            @FontAwesomeIconSet.Question.FixedWidth().Html
+            break;
+    }
+}

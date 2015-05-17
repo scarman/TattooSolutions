@@ -1,0 +1,8 @@
+{
+"version":3,
+"file":"plugin.min.js",
+"lineCount":1,
+"mappings":"AAmBAA,OAAOC,cAAcC,IAAI,CAAC,oBAAoB,CAAE,QAAQ,CAAA,CAAG,EAE1D,CAAE,CAAC,SAAD,CAFsB,CAEV",
+"sources":["plugin.js"],
+"names":["tinymce","PluginManager","add"]
+}

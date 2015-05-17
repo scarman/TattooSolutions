@@ -1,0 +1,184 @@
+﻿@model Tattoo.Web.Models.DashboardViewModel
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<h2>@FontAwesomeIconSet.BarChartO.Html Dashboard</h2>
+
+<div class="clearfix"></div>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <h3>Pending vs Processed Forms</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr class="info">
+                    <th></th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Processed</th>
+                    <td data-bind="text: ProcessedApplications">0</td>
+                </tr>
+                <tr>
+                    <th>Pending</th>
+                    <td data-bind="text: PendingApplications">0</td>
+                </tr>
+                <tr>
+                    <th>Total Submitted</th>
+                    <th data-bind="text: TotalApplications">0</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <div id="pendingFormsChart" style="width: 100%; height: 250px; padding: 0; position: relative;"></div>
+    </div>
+</div>
+
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <h3>Forms by Status</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr class="info">
+                    <th>Status</th>
+                    <th>Forms</th>
+                </tr>
+            </thead>
+            <tbody data-bind="foreach: FormsByStatus">
+                <tr>
+                    <td data-bind="text: $data[0]"></td>
+                    <td data-bind="text: $data[1]"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-6">
+        <div id="formsByStatusChart" style="width: 100%; height: 250px; padding: 0; position: relative;"></div>
+    </div>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryajax")
+    @Scripts.Render("~/bundles/flot")
+
+    <script language="javascript" type="text/javascript">
+        var viewModel = {};
+
+        var DashboardModel = function (data) {
+            var self = this;
+            ko.mapping.fromJS(data, {}, self);
+            RenderCharts(this);
+        };
+
+        function RenderCharts(data) {
+            renderChartPendVsProc(data);
+            renderChartFormsByStatus(data);
+        }
+
+        function renderChartPendVsProc(model) {
+            var data = [];
+
+            data[0] = {
+                label: "Processed",
+                data: model.ProcessedApplications()
+            };
+            data[1] = {
+                label: "Pending",
+                data: model.PendingApplications()
+            };
+
+            $.plot('#pendingFormsChart', data, {
+                series: {
+                    pie: {
+                        show: true,
+                        radius: 1,
+                        label: {
+                            show: true,
+                            radius: 2 / 4,
+                            background: {
+                                opacity: 0.5,
+                                color: '#000'
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    show: true
+                },
+                grid: {
+                    hoverable: true,
+                    clickable: true
+                }
+            });
+        }
+
+        function renderChartFormsByStatus(model) {
+            var data = [];
+            for (var i = 0; i < model.StatusCount(); i++) {
+                data[i] = {
+                    label: model.FormsByStatus()[i][0],
+                    data: model.FormsByStatus()[i][1]
+                }
+            }
+
+            $.plot('#formsByStatusChart', data, {
+                series: {
+                    pie: {
+                        show: true,
+                        radius: 1,
+                        label: {
+                            show: true,
+                            radius: 2 / 4,
+                            background: {
+                                opacity: 0.5,
+                                color: '#000'
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    show: true
+                },
+                grid: {
+                    hoverable: true,
+                    clickable: true
+                }
+            });
+        }
+
+        function GetDashboardInfo() {
+            $.ajax({
+                type: "GET",
+                url: '@Url.Action("DashboardInfo")',
+            }).done(function (data) {
+                viewModel = new DashboardModel(data);
+                ko.applyBindings(viewModel);
+            });
+        }
+
+        function UpdateDashboardInfo() {
+            $.ajax({
+                type: "GET",
+                url: '@Url.Action("DashboardInfo")',
+            }).done(function (data) {
+                viewModel.ProcessedApplications(data.ProcessedApplications);
+                viewModel.PendingApplications(data.PendingApplications);
+                viewModel.TotalApplications(data.TotalApplications);
+                viewModel.StatusCount(data.StatusCount);
+                viewModel.FormsByStatus(data.FormsByStatus);
+                RenderCharts(viewModel);
+            });
+        }
+
+        $(document).ready(function () {
+            GetDashboardInfo();
+            setInterval(UpdateDashboardInfo, 20000);
+        });
+    </script>
+}

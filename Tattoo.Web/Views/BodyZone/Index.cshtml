@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Tattoo.Web.Models.BodyZoneViewModels>
+
+@{
+    ViewBag.Title = @Resources.Lbl_BodyZone;
+}
+
+<div class="col-md-8">
+    <section>
+        <h2>@Resources.Lbl_BodyZone</h2>
+        <br />
+    </section>
+
+    <div id="dataContainer">
+
+    </div>
+
+    <p>
+        @Html.ActionLink(Resources.Btn_CreateBodyZone, "Create", new { area = "" }, new { @class = "btn btn-primary" })
+    </p>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryajax")
+
+    <script type="text/javascript" language="javascript">
+    function LoadData(size) {
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("GetPaged")' + ((size != undefined && size > 0) ? '?size=' + size : ''),
+            dataType: 'html',
+            beforeSend: function () {
+                $.blockUI({ message: '<h3>@FontAwesomeIconSet.Refresh.Spin().FixedWidth().Html @Resources.Msg_Loading ...</h3>' });
+                }
+            }).done(function (data) {
+                $('#dataContainer').empty();
+                $('#dataContainer').append(data);
+            }).error(function () {
+
+            }).always(function () {
+                $.unblockUI();
+            });
+        }
+
+        function ConfirmDelete(id, name) {
+            bootbox.confirm("@Resources.Msg_ConfirmDelete <h4>Element: " + name + "</h4>", function (result) {
+            if (result) {
+                $.post('@Url.Action("Delete")', { id: id },
+                    function (data) {
+                        if (data.Success) {
+                            toastr['success']("@Resources.Msg_ItemDeleted");
+                            LoadData();
+                        } else
+                            toastr['error']("@Resources.Msg_DeleteFailed");
+                    },
+                    "json"
+                );
+            } else
+                toastr['warning']("@Resources.Msg_DeleteCanceled");
+        });
+    }
+
+    $(document).ready(function () {
+        LoadData();
+    });
+    </script>
+}
+
+
+
+

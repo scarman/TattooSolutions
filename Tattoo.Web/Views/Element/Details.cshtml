@@ -1,0 +1,66 @@
+﻿@model Tattoo.Web.Models.ElementViewModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<hr />
+<div class="row">
+    <div class="col-md-5">
+        <img alt="@Model.Description" src="@Model.Url" class="img-details" />
+    </div>
+    <div class="col-md-7">
+        <article>
+            <div class="comments-avatar">
+                <img alt="@Model.Description" src="@(Model.Avatar+"?h=50")" class="img-details" />
+            </div>
+            <h4 class="comments-title">@Model.Author.Nick</h4>
+            <div class="comments-metas">@Model.DateCreated - @Model.Author.Country.ToCountry()</div>
+            <div class="comments-metas">Cantidad de Visitas: @Model.CountVisits</div>
+        <br />
+        <div class="comments-text">
+            <strong>@Resources.Lbl_Description:</strong> @Model.Description
+        </div>
+    </article><hr />
+    <p>
+        <h4>@Resources.Lbl_Comments</h4>
+        <div class="col-md-12">
+            <div id="dataContainer"></div>
+        </div>
+    </p>
+    <div class="form-group">
+        <div class="text-center">
+            <a onclick="javascript:history.back();" class="btn btn-default">@Resources.Btn_Back</a>
+        </div>
+    </div>
+</div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryajax")
+
+    <script type="text/javascript" language="javascript">
+        function LoadData(size) {
+            $.ajax({
+                type: "GET",
+                url: '@Url.Action("GetPagedCreate","Comment")',
+                data: { size: size, idElement: '@Model.Id' },
+                dataType: 'html',
+                beforeSend: function () {
+                    $.blockUI({ message: '<h3>@FontAwesomeIconSet.Refresh.Spin().FixedWidth().Html Loading...</h3>' });
+                }
+            }).done(function (data) {
+                $('#dataContainer').empty();
+                $('#dataContainer').append(data);
+            }).error(function () {
+
+            }).always(function () {
+                $.unblockUI();
+            });
+        }
+
+        $(document).ready(function () {
+            LoadData();
+        });
+    </script>
+}

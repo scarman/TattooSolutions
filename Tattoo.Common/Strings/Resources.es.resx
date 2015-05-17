@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Btn_Back" xml:space="preserve">
+    <value>Regresar</value>
+  </data>
+  <data name="Btn_Create" xml:space="preserve">
+    <value>Crear</value>
+  </data>
+  <data name="Btn_CreatePosition" xml:space="preserve">
+    <value>Crear Posición</value>
+  </data>
+  <data name="Btn_Delete" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
+  <data name="Btn_Edit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="Btn_Review" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
+  <data name="Btn_Save" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="Field_City" xml:space="preserve">
+    <value>Ciudad</value>
+  </data>
+  <data name="Field_Country" xml:space="preserve">
+    <value>País</value>
+  </data>
+  <data name="Field_CreatedAt" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="Field_Email" xml:space="preserve">
+    <value>Correo Electrónico</value>
+  </data>
+  <data name="Field_FirstName" xml:space="preserve">
+    <value>Nombre(s)</value>
+  </data>
+  <data name="Field_LastName" xml:space="preserve">
+    <value>Apellidos</value>
+  </data>
+  <data name="Field_NewPassword" xml:space="preserve">
+    <value>Nueva Contraseña</value>
+  </data>
+  <data name="Field_OldPassword" xml:space="preserve">
+    <value>Vieja Contraseña</value>
+  </data>
+  <data name="Field_Password" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="Field_Position" xml:space="preserve">
+    <value>Posición</value>
+  </data>
+  <data name="Field_RegisterEmail" xml:space="preserve">
+    <value>Correo Electrónico</value>
+  </data>
+  <data name="Field_RememberMe" xml:space="preserve">
+    <value>Recordarme</value>
+  </data>
+  <data name="Field_Role" xml:space="preserve">
+    <value>Rol</value>
+  </data>
+  <data name="Field_State" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="Field_Status" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="Field_UserName" xml:space="preserve">
+    <value>Nombre de Usuario</value>
+  </data>
+  <data name="Lbl_BodyZone" xml:space="preserve">
+    <value>Zona del Cuerpo</value>
+  </data>
+  <data name="Lbl_Category" xml:space="preserve">
+    <value>Categoría</value>
+  </data>
+  <data name="Lbl_Options" xml:space="preserve">
+    <value>Opciones</value>
+  </data>
+  <data name="Lbl_Position" xml:space="preserve">
+    <value>Posición</value>
+  </data>
+  <data name="Lbl_Positions" xml:space="preserve">
+    <value>Posición</value>
+  </data>
+  <data name="LogMsg_ExceptionOn" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="Menu_Admin" xml:space="preserve">
+    <value>Administración</value>
+  </data>
+  <data name="Menu_BodyZone" xml:space="preserve">
+    <value>Zona del Cuerpo</value>
+  </data>
+  <data name="Menu_Contact" xml:space="preserve">
+    <value>Contactos</value>
+  </data>
+  <data name="Menu_Home" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="Menu_Language" xml:space="preserve">
+    <value>Lenguaje</value>
+  </data>
+  <data name="Menu_LanguageEn" xml:space="preserve">
+    <value>Inglés</value>
+  </data>
+  <data name="Menu_LanguageEs" xml:space="preserve">
+    <value>Español</value>
+  </data>
+  <data name="Menu_Position" xml:space="preserve">
+    <value>Gestionar Posición</value>
+  </data>
+  <data name="Msg_ChangeRoleCancelled" xml:space="preserve">
+    <value>Acción cancelada. El rol no fue cambiado.</value>
+  </data>
+  <data name="Msg_ChangeRoleFailed" xml:space="preserve">
+    <value>Existe alguna falla. El rol no fue cambiado.</value>
+  </data>
+  <data name="Msg_ChangeRoleSuccess" xml:space="preserve">
+    <value>El rol fue cambiado satisfactoriamente.</value>
+  </data>
+  <data name="Msg_ChangeStatusCancelled" xml:space="preserve">
+    <value>Acción Cancelada. El estado no fue cambiado.</value>
+  </data>
+  <data name="Msg_ChangeStatusFailed" xml:space="preserve">
+    <value>Existe alguna falla. El estado no fue cambiado.</value>
+  </data>
+  <data name="Msg_ChangeStatusSuccess" xml:space="preserve">
+    <value>El estado fue cambiado satisfactoriamente.</value>
+  </data>
+  <data name="Msg_ConfirmDelete" xml:space="preserve">
+    <value>¿Realmente desea borrar el elemento?</value>
+  </data>
+  <data name="Msg_ConfirmRoleChange" xml:space="preserve">
+    <value>revisar</value>
+  </data>
+  <data name="Msg_ConfirmStatusChange" xml:space="preserve">
+    <value>Usted está a punto de cambiar el estatus del usuario. ¿Desea Continuar?</value>
+  </data>
+  <data name="Msg_DeleteCanceled" xml:space="preserve">
+    <value>Acción cancelada. Nada fue borrado.</value>
+  </data>
+  <data name="Msg_DeleteFailed" xml:space="preserve">
+    <value>Acción fallida. Nada fue borrado.</value>
+  </data>
+  <data name="Msg_ItemDeleted" xml:space="preserve">
+    <value>El elemento fue borrado satisfactoriamente.</value>
+  </data>
+  <data name="ValMsg_EmailExist" xml:space="preserve">
+    <value>El correo electrónico fue registrado.</value>
+  </data>
+  <data name="ValMsg_InactiveUser" xml:space="preserve">
+    <value>El usuario está inactivo. Por favor verifique su cuenta con el link enviado a su correo.</value>
+  </data>
+  <data name="ValMsg_InvalidCredentials" xml:space="preserve">
+    <value>Credenciales inválidas. El usuario y/o contraseña provista son inválidas.</value>
+  </data>
+  <data name="ValMsg_MustSelectLanguage" xml:space="preserve">
+    <value>Debe seleccionar al menos un lenguaje.</value>
+  </data>
+  <data name="ValMsg_PasswordsDoNotMatch" xml:space="preserve">
+    <value>La Nueva Contraseña y la Confirmación Contraseña no son iguales.</value>
+  </data>
+  <data name="ValMsg_PasswordTooShort" xml:space="preserve">
+    <value>El {0} debe tener al menos {1} caracteres de longitud.</value>
+  </data>
+  <data name="ValMsg_PositionExist" xml:space="preserve">
+    <value>revisar</value>
+  </data>
+  <data name="Btn_CreateBodyZone" xml:space="preserve">
+    <value>Crear Zona del Cuerpo</value>
+  </data>
+  <data name="Field_ConfirmPassword" xml:space="preserve">
+    <value>Confirmar Contraseña</value>
+  </data>
+  <data name="Field_Nick" xml:space="preserve">
+    <value>Apodo</value>
+  </data>
+  <data name="Btn_CreateElement" xml:space="preserve">
+    <value>Nuevo elemento</value>
+  </data>
+  <data name="Lbl_Element" xml:space="preserve">
+    <value>Elemento</value>
+  </data>
+  <data name="Lbl_Description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="Lbl_Comments" xml:space="preserve">
+    <value>Comentarios</value>
+  </data>
+  <data name="Lbl_DateCreated" xml:space="preserve">
+    <value>Fecha de Creado</value>
+  </data>
+  <data name="Lbl_Nick" xml:space="preserve">
+    <value>Nick</value>
+  </data>
+  <data name="Btn_CreateComment" xml:space="preserve">
+    <value>Comentar</value>
+  </data>
+  <data name="Lbl_CreateComment" xml:space="preserve">
+    <value>Crear Comentario</value>
+  </data>
+  <data name="Lbl_UpdateProfile" xml:space="preserve">
+    <value>Actualizar Perfil</value>
+  </data>
+  <data name="Msg_ChangeAvatar" xml:space="preserve">
+    <value>Si desea cambiar la imagen que se muestra, introduzca la nueva.</value>
+  </data>
+  <data name="Msg_Loading" xml:space="preserve">
+    <value>Cargando</value>
+  </data>
+  <data name="Msg_SelectionSuccess" xml:space="preserve">
+    <value>Selección guardada.</value>
+  </data>
+  <data name="Msg_SelectionFailed" xml:space="preserve">
+    <value>Selección fallida.</value>
+  </data>
+  <data name="Menu_Gallery" xml:space="preserve">
+    <value>Galería</value>
+  </data>
+  <data name="Menu_Forum" xml:space="preserve">
+    <value>Forum</value>
+  </data>
+  <data name="Menu_Blog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="Menu_Social" xml:space="preserve">
+    <value>Social</value>
+  </data>
+  <data name="Field_Description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="Field_Url" xml:space="preserve">
+    <value>Imagen</value>
+  </data>
+  <data name="Field_Zone" xml:space="preserve">
+    <value>Área del Cuerpo</value>
+  </data>
+  <data name="Lbl_CreateElement" xml:space="preserve">
+    <value>Crear Elemento</value>
+  </data>
+  <data name="Lbl_Notices" xml:space="preserve">
+    <value>Avisos</value>
+  </data>
+  <data name="Btn_CreateNotices" xml:space="preserve">
+    <value>Crear Aviso</value>
+  </data>
+</root>

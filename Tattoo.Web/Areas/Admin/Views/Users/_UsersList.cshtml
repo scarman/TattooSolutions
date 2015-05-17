@@ -1,0 +1,95 @@
+﻿@using Mvc.RazorTools.FontAwesome
+@using PagedList
+@using PagedList.Mvc
+@using Tattoo.Common.Strings
+@using Tattoo.Common
+@using Tattoo.Web
+@using Tattoo.Web.Areas.Admin.Models
+@using Tattoo.Web.Core.Enumerations
+@using Tattoo.Web.Models
+@model IEnumerable<Tattoo.Web.Areas.Admin.Models.UserViewModel>
+
+@{
+    var pagedList = Model as IPagedList<UserViewModel>
+                    ?? new PagedList<UserViewModel>(new List<UserViewModel>(), 0, Constants.DefaultPageSize);
+
+    var sizes = new SelectList(Constants.PageSizes, "Value", "Name", pagedList.PageSize);
+}
+
+@if (Model.Any())
+{
+    <table class="table table-responsive table-striped">
+        <thead>
+            <tr>
+                <th> @Resources.Field_UserName</th>
+                <th> @Resources.Field_Status</th>
+                <th> @Resources.Field_Role</th>
+                <th> @Resources.Lbl_Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.UserName)</td>
+                    <td>
+                        @Html.EnumDropDownListFor(models => item.Status, new Dictionary<string, object>
+                    {
+                        {
+                            "class", "form-control"
+                        },
+                        {
+                            "style", "display: inline; width: auto; height: 24px; padding: 1px 12px;"
+                        },
+                        {
+                            "data-form-id", item.Id
+                        },
+                        {
+                            "onchange", "javascript:ChangeStatus($(this).val(), $(this).attr('data-form-id'));"
+                        },
+                    })
+                    </td>
+                    <td>
+                        @Html.EnumDropDownListFor(models => item.Role, new Dictionary<string, object>
+                    {
+                        {
+                            "class", "form-control"
+                        },
+                        {
+                            "style", "display: inline; width: auto; height: 24px; padding: 1px 12px;"
+                        },
+                        {
+                            "data-form-id", item.Id
+                        },
+                        {
+                            "onchange", "javascript:ChangeRole($(this).val(), $(this).attr('data-form-id'));"
+                        },
+                    })
+                </td>
+                <td>
+                    <a class="btn btn-sm btn-danger" style="height: 24px; padding-top: 1px;" href="#" onclick="javascript:@string.Format("ConfirmDelete('{0}', '{1}')", item.Id, item.UserName);">@FontAwesomeIconSet.TrashO.FixedWidth().Html @Resources.Btn_Delete</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <hr />
+    <div class="row">
+        <div class="col-md-9 col-xs-12">
+            @Html.PagedListPager(
+                pagedList,
+                page => Url.Action("GetPaged",
+                    new { page, size = pagedList.PageSize }),
+                PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(AppUtilities.PagedListOptions, new AjaxOptions { UpdateTargetId = "dataContainer" }))
+        </div>
+        <div class="col-md-2 pull-right">
+            @Html.DropDownList("pageSize", sizes, new { @class = "form-control", onchange = "javascript:LoadData($(this).val());" })
+        </div>
+    </div>
+}
+else
+{
+    @Html.Partial("_Alert", new AlertPartialViewModel("Not users found...", BootstrapStyle.Warning))
+}
+<hr />

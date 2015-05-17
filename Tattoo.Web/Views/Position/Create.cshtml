@@ -1,0 +1,46 @@
+﻿@model Tattoo.Web.Models.PositionFormModel
+
+@{
+    ViewBag.Title = Resources.Btn_CreatePosition;
+}
+
+<h2>@Resources.Btn_CreatePosition</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-6">
+                @Html.EnumDropDownListFor(model => model.Status, new { @class = "form-control" } )
+                @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <br />
+        <div class="form-group">
+            <div class="col-md-6 col-md-offset-2">
+                <input type="submit" value="Create" class="btn btn-default" />
+                <a href=@Url.Action("Index") class="btn btn-primary">Back</a>
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

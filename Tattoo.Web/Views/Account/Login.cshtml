@@ -1,0 +1,90 @@
+﻿@model Tattoo.Web.Models.LoginViewModel
+
+@{
+    ViewBag.Title = "Enter to Career Center";
+}
+
+<h2>Login to Career Center</h2>
+<div class="row">
+    <div class="col-md-8">
+        <section id="loginForm">
+            @using (Html.BeginForm("Login", "Account", new { ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+            {
+                @Html.AntiForgeryToken()
+                <h4>Insert your credentials</h4>
+                <hr />
+                @Html.ValidationSummary(true)
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new { @class = "col-md-4 control-label" })
+                    <div class="col-md-8">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Email)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new { @class = "col-md-4 control-label" })
+                    <div class="col-md-8">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m.Password)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.RememberMe, new { @class = "col-md-4 control-label", style = "margin-top: -5px;" })
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.RememberMe)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-4 col-md-8">
+                        <input type="submit" value="Login" class="btn btn-default" />
+                    </div>
+                </div>
+                if (ViewBag.IsInvalid != null && ViewBag.IsInvalid)
+                {
+                    <div class="form-group">
+                        <div class="col-md-offset-4 col-md-8">
+                            Forgot your password?
+                            @Html.ActionLink("Recover it now!", "PasswordRecovery", new { area = "" })
+                        </div>
+                    </div>
+                }
+                if (ViewBag.IsInactive != null && ViewBag.IsInactive)
+                {
+                    <div class="form-group">
+                        <div class="col-md-offset-4 col-md-8">
+                            Inactive account?
+                            <a href="javascript:document.getElementById('resendEmailForm').submit()">Resend activation link.</a>
+                        </div>
+                    </div>
+                }
+                <div class="form-group">
+                    <div class="col-md-offset-4 col-md-8">
+                        Don't have an Account yet?
+                        @Html.ActionLink("Register now!", "Register", new { area = "" }, new { @class = "" })
+                    </div>
+                </div>
+            }
+        </section>
+
+        @if (ViewBag.IsInactive != null && ViewBag.IsInactive)
+        {
+            var email = (string)ViewBag.Email;
+            var url = (string)ViewBag.Url;
+            using (Html.BeginForm("ResendVerificationEmail", "Account", new { area = "" }, FormMethod.Post, new { id = "resendEmailForm", @class = "navbar-right" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.Hidden("email", email)
+                @Html.Hidden("url", url)
+            }
+        }
+
+    </div>
+    <div class="col-md-4">
+        <section id="socialLoginForm">
+            @Html.Partial("_SecurityConsiderations")
+        </section>
+    </div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

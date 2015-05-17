@@ -1,0 +1,130 @@
+﻿@using Microsoft.Ajax.Utilities
+@using Mvc.RazorTools.FontAwesome
+@using Tattoo.Common.Enumerations
+@using Tattoo.Data.Entities
+@model IEnumerable<Tattoo.Web.Models.ElementViewModel>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @for (int i = 1; i < 4; i++)
+    {
+        <div id="imgs" class="col-md-4">
+            @if (true)
+            {
+                var total = 1;
+                foreach (var item in Model)
+                {
+                    if (total == i)
+                    {
+                        <div class="polaroid">
+                            <div class="img-base">
+                                <a href="@Url.Action("Create","Comment", new {id = item.Id})">
+                                    <img alt="@item.Description" src="@item.SizedPicture(370)" class="img-polaroid" />
+                                </a>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a href="@Url.Action("UpdateProfile","Account")">
+                                        <img src="@(item.Avatar+"?h=39")" class="img-avatar" />
+                                    </a>
+                                </div>
+                                <div class="col-md-9">
+                                    <strong>@item.Author.Nick</strong>
+                                    <em class="date-avatar">
+                                        @if (item.Author.Country.ToCountry() != "")
+                                        {
+                                            <small>
+                                                @item.Author.State.ToState(item.Author.Country), @item.Author.Country.ToCountry()
+                                            </small>
+                                        }
+                                        else
+                                        {
+                                            if (item.Author.Name == User.Identity.Name)
+                                            {
+                                                <small><a class="btn btn-xs btn-info" href="@Url.Action("UpdateProfile", "Account")">Update Profile</a></small>
+                                            }
+                                        }
+                                    </em>
+                                </div>
+                            </div>
+                            <p>
+                                @if (item.Description.Length > 160)
+                                {
+                                    @item.DescriptionShorted
+                                    <a href="@Url.Action("Details","Element", new {id = item.Id})" class="btn btn-xs">
+                                        <kbd>more</kbd>
+                                    </a>
+                                }
+                                else
+                                {
+                                    @item.Description
+                                }
+                            </p>
+                            @if (!item.Like)
+                            {<a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="@Resources.Lbl_Like" href="#" onclick="javascript:@string.Format("UpdateSelection('{0}', '{1}',", item.Id,TypeSelection.Like)$(this))"><span>@item.CountLike</span> @FontAwesomeIconSet.ThumbsOUp.Html</a>
+                            }
+                            else
+                            {<a class="btn btn-default btn-xs disabled" data-toggle="tooltip" data-placement="top" title="@Resources.Lbl_Like" href="#" onclick="javascript:@string.Format("UpdateSelection('{0}', '{1}',", item.Id, TypeSelection.Like)$(this))"><span>@item.CountLike</span> @FontAwesomeIconSet.ThumbsOUp.Html</a>
+                            }
+                            @if (!item.Original)
+                            {<a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="@Resources.Lbl_Original" href="#" onclick="javascript:@string.Format("UpdateSelection('{0}', '{1}',", item.Id, TypeSelection.Original)$(this))"><span>@item.CountOriginal</span> @FontAwesomeIconSet.Trophy.Html</a>
+                            }
+                            else
+                            {<a class="btn btn-default btn-xs disabled" data-toggle="tooltip" data-placement="top" title="@Resources.Lbl_Original" href="#" onclick="javascript:@string.Format("UpdateSelection('{0}', '{1}',", item.Id, TypeSelection.Original)$(this))"><span>@item.CountOriginal</span> @FontAwesomeIconSet.Trophy.Html</a>
+                            }
+                            @if (!item.Follows)
+                            {<a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="@Resources.Lbl_Follow" href="#" onclick="javascript:@string.Format("UpdateSelection('{0}', '{1}',", item.Id, TypeSelection.Follow)$(this))"><span>@item.CountFollows</span> @FontAwesomeIconSet.HandORight.Html</a>
+                            }
+                            else
+                            {<a class="btn btn-default btn-xs disabled" data-toggle="tooltip" data-placement="top" title="@Resources.Lbl_Follow" href="#" onclick="javascript:@string.Format("UpdateSelection('{0}', '{1}',", item.Id, TypeSelection.Follow)$(this))"><span>@item.CountFollows</span> @FontAwesomeIconSet.HandORight.Html</a>
+                            }
+                            @*<a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="@Resources.Lbl_Like" href="#" onclick="javascript:@string.Format("UpdateSelection('{0}', '{1}',", item.Id,TypeSelection.Like)$(this))"><span>@item.CountLike</span> @FontAwesomeIconSet.ThumbsOUp.Html</a>
+                                <a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="@Resources.Lbl_Original" href="#" onclick="javascript:@string.Format("UpdateSelection('{0}', '{1}',", item.Id,TypeSelection.Original)$(this))"><span>@item.CountOriginal</span> @FontAwesomeIconSet.Trophy.Html</a>
+                                <a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="@Resources.Lbl_Follow" href="#" onclick="javascript:@string.Format("UpdateSelection('{0}', '{1}',", item.Id,TypeSelection.Follow)$(this))"><span>@item.CountFollows</span> @FontAwesomeIconSet.HandORight.Html</a>*@
+                            <a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="@Resources.Lbl_Comments" href="@Url.Action("Create","Comment", new {id=@item.Id.ToString()})">@item.TotalComments @FontAwesomeIconSet.CommentO.Html</a>
+                        </div>
+                    }
+                    if (total == 3)
+                    {
+                        total = 0;
+                    }
+                    total++;
+                }
+            }
+        </div>
+    }
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryajax")
+
+    <script>
+        $('a').tooltip();
+
+        function UpdateSelection(id, type, control) {
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("UpdateElementBySelection","Element")',
+                data: { id: id, type: type },
+                dataType: 'json',
+                beforeSend: function () {
+                    $.blockUI({ message: '<h3>@FontAwesomeIconSet.Refresh.Spin().FixedWidth().Html @Resources.Msg_Loading ...</h3>' });
+                }
+            }).done(function (data) {
+                if (data.Success) {
+                    control.find('span').empty().append(data.Count);
+                    control.addClass("disabled");
+                    toastr['success']("@Resources.Msg_SelectionSuccess");
+                } else
+                    toastr['error']("@Resources.Msg_SelectionFailed");
+            }).error(function () {
+
+            }).always(function () {
+                $.unblockUI();
+            });
+        };
+    </script>
+}

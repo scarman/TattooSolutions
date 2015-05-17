@@ -1,0 +1,33 @@
+﻿@model HandleErrorInfo
+
+@{
+    ViewBag.Title = "Error";
+}
+
+<h1 class="text-danger">@FontAwesomeIconSet.Bug.Html Error detected.</h1>
+<h3 class="text-danger">An error occurred while processing your request.</h3>
+@if (Model != null)
+{
+    <hr />
+    <p>
+        @if (!string.IsNullOrEmpty(Model.ControllerName) && !string.IsNullOrEmpty(Model.ActionName))
+        {
+            <h3>On page: @Model.ControllerName > @Model.ActionName</h3>
+        }
+        If you don't know what to do, please, contact the system administrator for support.
+        <br />
+        <small>
+            Details for this exception, if available, were stored on the application exception log. @Html.RouteLink("Review", "Elmah", new { area = "" }) the log for more.
+        </small>
+    </p>
+}
+else
+{
+    <p>
+        If you don't know what to do, please, contact the system administrator for support.
+        <br />
+        <small>
+            Details for this exception, if available, were stored on the application exception log. @Html.RouteLink("Review", "Elmah", new { area = "" }) the log for more.
+        </small>
+    </p>
+}

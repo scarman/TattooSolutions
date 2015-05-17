@@ -1,0 +1,49 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@using Tattoo.Common
+@using Tattoo.Web.Models
+@model IEnumerable<CommentViewModel>
+
+@{
+    var pagedList = Model as IPagedList<CommentViewModel>
+                    ?? new PagedList<CommentViewModel>(new List<CommentViewModel>(), 0, Constants.DefaultPageSize);
+
+    var sizes = new SelectList(Constants.PageSizes, "Value", "Name", pagedList.PageSize);
+}
+
+<div class="row">
+    @if (Model.Any())
+    {
+        foreach (var item in Model)
+        {
+            <article class="comments">
+                <header class="comments-header">
+                    <img alt="avatar" src=@item.Author.SizedPicture(75) width="45" class="comments-avatar" />
+                    <h4 class="comments-title">@Html.DisplayFor(modelItem => item.Author.Nick)</h4>
+                    <div class="comments-metas">
+                        @Html.DisplayFor(modelItem => item.DateCreated) -
+                        @item.Author.Country.ToCountry()
+                    </div>
+                </header>
+                <div class="comments-text">@Html.DisplayFor(modelItem => item.CommentText)</div>
+            </article>
+        }
+
+        <div class="row">
+            <div class="col-md-9 col-xs-12">
+                @Html.PagedListPager(
+                pagedList,
+                page => Url.Action("GetPagedCreate",
+                 new { page, size = pagedList.PageSize, idElement = @ViewBag.IdElement }),
+                PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(AppUtilities.PagedListOptions, new AjaxOptions { UpdateTargetId = "dataContainer" }))
+            </div>
+            <div class="col-md-2 pull-right">
+                @Html.DropDownList("pageSize", sizes, new { @class = "form-control", onchange = "javascript:LoadData($(this).val());" })
+            </div>
+        </div>
+    }
+    else
+    {
+        @Html.Partial("_Alert", new AlertPartialViewModel("No se encontraron comentarios...", BootstrapStyle.Warning))
+    }
+</div>

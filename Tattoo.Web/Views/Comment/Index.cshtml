@@ -1,0 +1,65 @@
+﻿@model Tattoo.Web.Models.CommentViewModel
+
+@{
+    ViewBag.Title = @Resources.Lbl_Comments;
+}
+
+<div class="col-md-8">
+    <section>
+        <h2>@Resources.Lbl_Comments</h2>
+        <br />
+    </section>
+
+    <div id="dataContainer"></div>
+    
+    <p>
+        <a onclick="javascript:history.back();" class="btn btn-default">@Resources.Btn_Back</a>
+    </p>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryajax")
+
+    <script type="text/javascript" language="javascript">
+    function LoadData(size) {
+        $.ajax({
+            type: "GET",
+            url: '@Url.Action("GetPaged")' + ((size != undefined && size > 0) ? '?size=' + size : ''),
+            dataType: 'html',
+            beforeSend: function () {
+                $.blockUI({ message: '<h3>@FontAwesomeIconSet.Refresh.Spin().FixedWidth().Html @Resources.Msg_Loading ...</h3>' });
+                }
+            }).done(function (data) {
+                $('#dataContainer').empty();
+                $('#dataContainer').append(data);
+            }).error(function () {
+
+            }).always(function () {
+                $.unblockUI();
+            });
+        }
+
+        function ConfirmDelete(id, name) {
+            bootbox.confirm("@Resources.Msg_ConfirmDelete <h4>" + name + "</h4>", function (result) {
+            if (result) {
+                $.post('@Url.Action("Delete")', { id: id },
+                    function (data) {
+                        if (data.Success) {
+                            toastr['success']("@Resources.Msg_ItemDeleted");
+                            LoadData();
+                        } else
+                            toastr['error']("@Resources.Msg_DeleteFailed");
+                    },
+                    "json"
+                );
+            } else
+                toastr['warning']("@Resources.Msg_DeleteCanceled");
+        });
+    }
+
+    $(document).ready(function () {
+        LoadData();
+    });
+    </script>
+}

@@ -1,0 +1,50 @@
+﻿@using Mvc.RazorTools.FontAwesome
+@{
+    ViewBag.Title = "Contact";
+}
+
+<section class="clearfix">
+    <h1>Datos de Contactos</h1>
+
+    <h2>Nos puedes encontrar aquí:</h2>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-md-6">
+                <h2>Dirección</h2>
+                <address>
+                    Calle X, No. Y<br />
+                    Line 1<br />
+                    Line 2<br />
+                    <abbr title="Teléfono">Telf:</abbr>
+                    (+1)800 xxx xxxx
+                </address>
+            </div>
+            <div class="col-md-6">
+                <h2>Correos Electrónicos</h2>
+                <address>
+                    <strong>Soporte:</strong>   <a href="mailto:support@example.com">support@example.com</a><br />
+                    <strong>Publicidad:</strong> <a href="mailto:marketing@example.com">marketing@example.com</a>
+                </address>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <form class="form-horizontal" method="POST">
+            <div class="form-group col-md-4">
+                <div id="Countries" class="bcp-selectbox bcp-countries" data-flags="true" data-country="US"></div>
+                <br />
+                <div class="bcp-selectbox bcp-states" data-country="Countries" data-state="FL"></div>
+                <br/>
+                <input class="form-control"/>
+                <br/>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/country")
+}

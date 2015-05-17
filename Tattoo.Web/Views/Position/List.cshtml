@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Tattoo.Web.Models.ElementViewModel>
+@{
+    ViewBag.Title = "List";
+}
+@section styles
+{
+    @Styles.Render("~/styles/datatables")
+}
+
+<h2>List</h2>
+<br/>
+
+<table id="dataTable" class="display">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.DateCreated)</th>
+            <th>@Html.DisplayNameFor(m => m.Zone)</th>
+            <th>@Html.DisplayNameFor(m => m.Description)</th>
+            <th>@Html.DisplayNameFor(m => m.Type)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.DateCreated.ToString("g")</td>
+                <td>@item.Zone.Zone</td>
+                <td>@item.Description</td>
+                <td>@item.Type</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/datatables")
+    <script>
+        $(document).ready(function() {
+            $('#dataTable').dataTable();
+        });
+    </script>
+}

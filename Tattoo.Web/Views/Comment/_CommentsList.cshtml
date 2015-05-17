@@ -1,0 +1,56 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@using Tattoo.Common
+@using Tattoo.Web.Models
+@model IEnumerable<CommentViewModel>
+
+@{
+    var pagedList = Model as IPagedList<CommentViewModel>;
+
+    var sizes = new SelectList(Constants.PageSizes, "Value", "Name", pagedList == null ? Constants.DefaultPageSize : pagedList.PageSize);
+}
+
+@if (Model.Any())
+{
+    <table class="table" style="margin-bottom: 0;">
+        <tr>
+            <th>@Resources.Lbl_DateCreated</th>
+            <th>@Resources.Lbl_Nick</th>
+            <th>@Resources.Lbl_Comments</th>
+            @*<th>@Resources.Lbl_Source</th>*@
+            <th>@Resources.Lbl_Options</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.DateCreated)</td>
+                <td>@Html.DisplayFor(modelItem => item.Author.Nick)</td>
+                <td>@Html.DisplayFor(modelItem => item.CommentText)</td>
+                @*<td>@Html.DisplayFor(modelItem => item.IdElement.Description)</td>*@
+                <td>
+                    <a href="#" class="btn btn-sm btn-default" onclick="javascript:@string.Format("ConfirmDelete('{0}', '{1}')", item.Id, item.CommentText);">
+                        @FontAwesomeIconSet.TrashO.Html @Resources.Btn_Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </table>
+
+    <hr />
+    <div class="row">
+        <div class="col-md-9 col-xs-12">
+            @Html.PagedListPager(
+                pagedList,
+                page => Url.Action("GetPaged",
+                    new { page, size = pagedList.PageSize }),
+                PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(AppUtilities.PagedListOptions, new AjaxOptions { UpdateTargetId = "dataContainer" }))
+        </div>
+        <div class="col-md-2 pull-right">
+            @Html.DropDownList("pageSize", sizes, new { @class = "form-control", onchange = "javascript:LoadData($(this).val());" })
+        </div>
+    </div>
+}
+else
+{
+    @Html.Partial("_Alert", new AlertPartialViewModel("No se encontraron comentarios...", BootstrapStyle.Warning))
+}

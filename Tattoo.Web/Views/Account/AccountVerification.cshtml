@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Account Verification";
+    var email = (string)ViewBag.Email;
+    var url = (string)ViewBag.Url;
+}
+
+@using (Html.BeginForm("ResendVerificationEmail", "Account", new { area = "" }, FormMethod.Post, new { id = "resendEmailForm", @class = "navbar-right" }))
+{
+    @Html.AntiForgeryToken()
+
+    <h1 class="text-danger">@FontAwesomeIconSet.Envelope.Html Email send failed.</h1>
+    <h3 class="text-danger">The Verification Email wasn't delivered, to send the email again click the following link: <a href="javascript:document.getElementById('resendEmailForm').submit()">Resend Email</a></h3>
+    <p>If the problem persists, please contact the system administrator.</p>
+    @Html.Hidden("email", email)
+    @Html.Hidden("url", url)
+}

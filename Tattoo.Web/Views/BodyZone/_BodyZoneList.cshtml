@@ -1,0 +1,55 @@
+﻿@using PagedList
+@using PagedList.Mvc
+@using Tattoo.Common
+@using Tattoo.Web.Models
+@model IEnumerable<BodyZoneViewModels>
+@{
+    var pagedList = Model as IPagedList<BodyZoneViewModels>
+                    ?? new PagedList<BodyZoneViewModels>(new List<BodyZoneViewModels>(), 0, Constants.DefaultPageSize);
+
+    var sizes = new SelectList(Constants.PageSizes, "Value", "Name", pagedList.PageSize);
+}
+
+@if (Model.Any())
+{
+    <table class="table table-responsive table-striped">
+        <thead>
+            <tr>
+                <th>@Resources.Lbl_BodyZone</th>
+                <th> @Resources.Lbl_Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.Zone)</td>
+                    <td>
+                        <a class="btn btn-sm btn-primary" style="height: 24px; padding-top: 1px;" href="@Url.Action("Edit", new { area = "", id = item.Id })">@FontAwesomeIconSet.PencilSquareO.FixedWidth().Html @Resources.Btn_Edit</a>
+                        <a class="btn btn-sm btn-danger" style="height: 24px; padding-top: 1px;" href="#" onclick="javascript:@string.Format("ConfirmDelete('{0}', '{1}')", item.Id, item.Zone);">@FontAwesomeIconSet.TrashO.FixedWidth().Html @Resources.Btn_Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <hr />
+    <div class="row">
+        <div class="col-md-9 col-xs-12">
+            @Html.PagedListPager(
+                pagedList,
+                page => Url.Action("GetPaged",
+                    new { page, size = pagedList.PageSize }),
+                PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(AppUtilities.PagedListOptions, new AjaxOptions { UpdateTargetId = "dataContainer" }))
+        </div>
+        <div class="col-md-2 pull-right">
+            @Html.DropDownList("pageSize", sizes, new { @class = "form-control", onchange = "javascript:LoadData($(this).val());" })
+        </div>
+    </div>
+}
+else
+{
+    @Html.Partial("_Alert", new AlertPartialViewModel("No positions found...", BootstrapStyle.Warning))
+}
+<hr />
+

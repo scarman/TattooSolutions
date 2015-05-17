@@ -1,0 +1,52 @@
+.navbar-collapse {
+    min-height: 60px;
+}
+
+a.logo.navbar-brand:hover {
+    color: #ddd;
+}
+
+fieldset {
+    padding: 0 10px 15px;
+    margin: 0;
+    margin-top: -15px;
+    border: 1px solid #c0c0c0;
+    border-radius: 10px;
+}
+
+legend {
+    display: block;
+    width: auto;
+    padding: 0 5px;
+    margin: 10px;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: inherit;
+    color: #333;
+    border: 0;
+}
+
+fieldset[disabled] .form-control {
+    cursor: not-allowed;
+    background-color: #eee;
+    opacity: 1;
+}
+
+fieldset[disabled] input[type="radio"],
+fieldset[disabled] input[type="checkbox"],
+fieldset[disabled] .radio,
+fieldset[disabled] .radio-inline,
+fieldset[disabled] .checkbox,
+fieldset[disabled] .checkbox-inline {
+    cursor: not-allowed;
+}
+
+fieldset[disabled] .btn {
+    pointer-events: none;
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65;
+}

@@ -1,0 +1,144 @@
+﻿@using Elmah.ContentSyndication
+@using Tattoo.Common.Enumerations
+@model Tattoo.Web.Models.CommentFormModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>@Resources.Lbl_CreateComment</h2>
+
+<div class="row">
+    <section class="col-md-5">
+        <img alt="@Model.Element.Description" src="@Model.Element.Url" class="img-details" />
+    </section>
+    <section class="col-md-7">
+        <article>
+            <div class="comments-avatar">
+                <img alt="@Model.Element.Description" src="@(Model.Element.Avatar+"?h=50")" class="img-details" />
+            </div>
+            <h4 class="comments-title">@Model.Author.Nick</h4>
+            <div class="comments-metas">@Model.DateCreated - @Model.Author.State.ToState(Model.Author.Country) / @Model.Author.Country.ToCountry()</div>
+            <div class="">
+                <div class="text-right" style="margin-top: 0;">
+                    <a href="@Url.Action("Index","Home")" class="btn btn-default">@Resources.Btn_Back</a>
+                </div>
+            </div>
+        </article>
+        <hr />
+        <article>
+            @if (!@Model.Element.Like)
+            {<a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="@Resources.Lbl_Like" href="#" onclick="javascript:@string.Format("UpdateSelection('{0}', '{1}',", @Model.IdElement,TypeSelection.Like)$(this))"><span>@Model.Element.CountLike</span> @FontAwesomeIconSet.ThumbsOUp.Html</a>
+            }
+            else
+            {<a class="btn btn-default btn-xs disabled" data-toggle="tooltip" data-placement="top" title="@Resources.Lbl_Like" href="#" onclick="javascript:@string.Format("UpdateSelection('{0}', '{1}',", @Model.IdElement,TypeSelection.Like)$(this))"><span>@Model.Element.CountLike</span> @FontAwesomeIconSet.ThumbsOUp.Html</a>
+            }
+            @if (!@Model.Element.Original)
+            {<a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="@Resources.Lbl_Original" href="#" onclick="javascript:@string.Format("UpdateSelection('{0}', '{1}',", @Model.IdElement,TypeSelection.Original)$(this))"><span>@Model.Element.CountOriginal</span> @FontAwesomeIconSet.Trophy.Html</a>
+            }
+            else
+            {<a class="btn btn-default btn-xs disabled" data-toggle="tooltip" data-placement="top" title="@Resources.Lbl_Original" href="#" onclick="javascript:@string.Format("UpdateSelection('{0}', '{1}',", @Model.IdElement,TypeSelection.Original)$(this))"><span>@Model.Element.CountOriginal</span> @FontAwesomeIconSet.Trophy.Html</a>
+            }
+            @if (!@Model.Element.Follows)
+            {<a class="btn btn-default btn-xs" data-toggle="tooltip" data-placement="top" title="@Resources.Lbl_Follow" href="#" onclick="javascript:@string.Format("UpdateSelection('{0}', '{1}',", @Model.IdElement,TypeSelection.Follow)$(this))"><span>@Model.Element.CountFollows</span> @FontAwesomeIconSet.HandORight.Html</a>
+            }
+            else
+            {<a class="btn btn-default btn-xs disabled" data-toggle="tooltip" data-placement="top" title="@Resources.Lbl_Follow" href="#" onclick="javascript:@string.Format("UpdateSelection('{0}', '{1}',", @Model.IdElement,TypeSelection.Follow)$(this))"><span>@Model.Element.CountFollows</span> @FontAwesomeIconSet.HandORight.Html</a>
+            }
+        </article>
+        <hr />
+        <article>
+            <div class="comments-text">
+                <strong>@Resources.Lbl_Description:</strong> @Model.Element.Description
+            </div>
+        </article>
+
+
+
+        <div class="clearfix"></div>
+        <hr />
+
+        <aside>
+            @using (Html.BeginForm("Create", "Comment", new { ReturnUrl = ViewBag.Url }, FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(model => model.AuthorName)
+                @Html.HiddenFor(model => model.DateCreated)
+                @Html.HiddenFor(model => model.IdElement)
+
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="form-group">
+                        <div class="input-group">
+                            @Html.EditorFor(model => model.CommentText, new { htmlAttributes = new { @class = "form-control" } })
+                            <span class="input-group-btn">
+                                <input type="submit" class="btn btn-primary" value=@Resources.Btn_CreateComment />
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            }
+
+            <div class="col-md-12">
+                <div id="dataContainer"></div>
+            </div>
+        </aside>
+    </section>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jqueryajax")
+
+    <script type="text/javascript" language="javascript">
+        function LoadData(size) {
+            $.ajax({
+                type: "GET",
+                url: '@Url.Action("GetPagedCreate")',
+                data: { size: size, idElement: '@Model.Element.Id' },
+                dataType: 'html',
+                beforeSend: function () {
+                    $.blockUI({ message: '<h3>@FontAwesomeIconSet.Refresh.Spin().FixedWidth().Html @Resources.Msg_Loading ...</h3>' });
+                }
+            }).done(function (data) {
+                $('#dataContainer').empty();
+                $('#dataContainer').append(data);
+            }).error(function () {
+
+            }).always(function () {
+                $.unblockUI();
+            });
+        }
+
+        $(document).ready(function () {
+            LoadData();
+        });
+
+        $('a').tooltip();
+
+        function UpdateSelection(id, type, control) {
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("UpdateElementBySelection","Element")',
+                data: { id: id, type: type },
+                dataType: 'json',
+                beforeSend: function () {
+                    $.blockUI({ message: '<h3>@FontAwesomeIconSet.Refresh.Spin().FixedWidth().Html @Resources.Msg_Loading ...</h3>' });
+                }
+            }).done(function (data) {
+                if (data.Success) {
+                    control.find('span').empty().append(data.Count);
+                    control.addClass("disabled");
+                    toastr['success']("@Resources.Msg_SelectionSuccess");
+                } else
+                    toastr['error']("@Resources.Msg_SelectionFailed");
+            }).error(function () {
+
+            }).always(function () {
+                $.unblockUI();
+            });
+        };
+    </script>
+}

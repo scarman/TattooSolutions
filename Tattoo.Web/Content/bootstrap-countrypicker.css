@@ -1,0 +1,1819 @@
+/* Bootstrap Country Picker - Copyright 2014 */
+.bcp-flag-AD,
+.bcp-flag-AE,
+.bcp-flag-AF,
+.bcp-flag-AG,
+.bcp-flag-AI,
+.bcp-flag-AL,
+.bcp-flag-AM,
+.bcp-flag-AN,
+.bcp-flag-AO,
+.bcp-flag-AQ,
+.bcp-flag-AR,
+.bcp-flag-AS,
+.bcp-flag-AT,
+.bcp-flag-AU,
+.bcp-flag-AW,
+.bcp-flag-AX,
+.bcp-flag-AZ,
+.bcp-flag-BA,
+.bcp-flag-BB,
+.bcp-flag-BD,
+.bcp-flag-BE,
+.bcp-flag-BG,
+.bcp-flag-BH,
+.bcp-flag-BI,
+.bcp-flag-BJ,
+.bcp-flag-BL,
+.bcp-flag-BM,
+.bcp-flag-BN,
+.bcp-flag-BO,
+.bcp-flag-BR,
+.bcp-flag-BS,
+.bcp-flag-BT,
+.bcp-flag-BW,
+.bcp-flag-BY,
+.bcp-flag-BZ,
+.bcp-flag-CA,
+.bcp-flag-CD,
+.bcp-flag-CF,
+.bcp-flag-CG,
+.bcp-flag-CH,
+.bcp-flag-CI,
+.bcp-flag-CL,
+.bcp-flag-CM,
+.bcp-flag-CN,
+.bcp-flag-CO,
+.bcp-flag-CR,
+.bcp-flag-CV,
+.bcp-flag-CY,
+.bcp-flag-CZ,
+.bcp-flag-DJ,
+.bcp-flag-DK,
+.bcp-flag-DM,
+.bcp-flag-DO,
+.bcp-flag-DZ,
+.bcp-flag-EC,
+.bcp-flag-EE,
+.bcp-flag-EG,
+.bcp-flag-EH,
+.bcp-flag-ER,
+.bcp-flag-ES,
+.bcp-flag-ET,
+.bcp-flag-EU,
+.bcp-flag-FI,
+.bcp-flag-FJ,
+.bcp-flag-FK,
+.bcp-flag-FM,
+.bcp-flag-FO,
+.bcp-flag-FR,
+.bcp-flag-FX,
+.bcp-flag-GF,
+.bcp-flag-GP,
+.bcp-flag-MQ,
+.bcp-flag-NC,
+.bcp-flag-PF,
+.bcp-flag-PM,
+.bcp-flag-RE,
+.bcp-flag-TF,
+.bcp-flag-WF,
+.bcp-flag-GA,
+.bcp-flag-GB,
+.bcp-flag-GD,
+.bcp-flag-GE,
+.bcp-flag-GG,
+.bcp-flag-GH,
+.bcp-flag-GL,
+.bcp-flag-GM,
+.bcp-flag-GN,
+.bcp-flag-GQ,
+.bcp-flag-GR,
+.bcp-flag-GS,
+.bcp-flag-GT,
+.bcp-flag-GU,
+.bcp-flag-GW,
+.bcp-flag-GY,
+.bcp-flag-HK,
+.bcp-flag-HN,
+.bcp-flag-HR,
+.bcp-flag-HT,
+.bcp-flag-HU,
+.bcp-flag-ID,
+.bcp-flag-IE,
+.bcp-flag-IL,
+.bcp-flag-IM,
+.bcp-flag-IN,
+.bcp-flag-IQ,
+.bcp-flag-IS,
+.bcp-flag-IT,
+.bcp-flag-JE,
+.bcp-flag-JM,
+.bcp-flag-JO,
+.bcp-flag-JP,
+.bcp-flag-KE,
+.bcp-flag-KG,
+.bcp-flag-KH,
+.bcp-flag-KI,
+.bcp-flag-KM,
+.bcp-flag-KN,
+.bcp-flag-KP,
+.bcp-flag-KR,
+.bcp-flag-KV,
+.bcp-flag-KW,
+.bcp-flag-KY,
+.bcp-flag-LA,
+.bcp-flag-LC,
+.bcp-flag-LK,
+.bcp-flag-LR,
+.bcp-flag-LS,
+.bcp-flag-LT,
+.bcp-flag-LU,
+.bcp-flag-LV,
+.bcp-flag-LY,
+.bcp-flag-MA,
+.bcp-flag-ME,
+.bcp-flag-MG,
+.bcp-flag-MH,
+.bcp-flag-ML,
+.bcp-flag-MM,
+.bcp-flag-MP,
+.bcp-flag-MR,
+.bcp-flag-MS,
+.bcp-flag-MT,
+.bcp-flag-MU,
+.bcp-flag-MV,
+.bcp-flag-MW,
+.bcp-flag-MZ,
+.bcp-flag-NA,
+.bcp-flag-NE,
+.bcp-flag-NF,
+.bcp-flag-NG,
+.bcp-flag-NI,
+.bcp-flag-NL,
+.bcp-flag-NO,
+.bcp-flag-NP,
+.bcp-flag-NR,
+.bcp-flag-NZ,
+.bcp-flag-OM,
+.bcp-flag-PA,
+.bcp-flag-PE,
+.bcp-flag-PG,
+.bcp-flag-PH,
+.bcp-flag-PK,
+.bcp-flag-PL,
+.bcp-flag-PN,
+.bcp-flag-PS,
+.bcp-flag-PT,
+.bcp-flag-PW,
+.bcp-flag-PY,
+.bcp-flag-QA,
+.bcp-flag-RS,
+.bcp-flag-RU,
+.bcp-flag-RW,
+.bcp-flag-SA,
+.bcp-flag-SB,
+.bcp-flag-SC,
+.bcp-flag-SD,
+.bcp-flag-SE,
+.bcp-flag-SG,
+.bcp-flag-SH,
+.bcp-flag-SI,
+.bcp-flag-SK,
+.bcp-flag-SM,
+.bcp-flag-SN,
+.bcp-flag-SO,
+.bcp-flag-SR,
+.bcp-flag-SS,
+.bcp-flag-ST,
+.bcp-flag-SV,
+.bcp-flag-SY,
+.bcp-flag-SZ,
+.bcp-flag-TC,
+.bcp-flag-TD,
+.bcp-flag-TG,
+.bcp-flag-TH,
+.bcp-flag-TJ,
+.bcp-flag-TM,
+.bcp-flag-TN,
+.bcp-flag-TP,
+.bcp-flag-TR,
+.bcp-flag-TT,
+.bcp-flag-TV,
+.bcp-flag-TW,
+.bcp-flag-TZ,
+.bcp-flag-UA,
+.bcp-flag-UG,
+.bcp-flag-US,
+.bcp-flag-UY,
+.bcp-flag-UZ,
+.bcp-flag-VC,
+.bcp-flag-VE,
+.bcp-flag-VG,
+.bcp-flag-VI,
+.bcp-flag-VN,
+.bcp-flag-VU,
+.bcp-flag-WS,
+.bcp-flag-YE,
+.bcp-flag-ZA,
+.bcp-flag-ZM,
+.bcp-flag-BF,
+.bcp-flag-CU,
+.bcp-flag-DE,
+.bcp-flag-IR,
+.bcp-flag-KZ,
+.bcp-flag-LB,
+.bcp-flag-LI,
+.bcp-flag-MC,
+.bcp-flag-MD,
+.bcp-flag-MK,
+.bcp-flag-MN,
+.bcp-flag-MO,
+.bcp-flag-MX,
+.bcp-flag-MY,
+.bcp-flag-PR,
+.bcp-flag-RO,
+.bcp-flag-SL,
+.bcp-flag-TO,
+.bcp-flag-VA,
+.bcp-flag-ZW {
+    width: 16px;
+    height: 14px;
+    background: url(../Content/Images/Flags/countries.flags.png) no-repeat;
+}
+
+    .bcp-flag-AD:empty,
+    .bcp-flag-AE:empty,
+    .bcp-flag-AF:empty,
+    .bcp-flag-AG:empty,
+    .bcp-flag-AI:empty,
+    .bcp-flag-AL:empty,
+    .bcp-flag-AM:empty,
+    .bcp-flag-AN:empty,
+    .bcp-flag-AO:empty,
+    .bcp-flag-AQ:empty,
+    .bcp-flag-AR:empty,
+    .bcp-flag-AS:empty,
+    .bcp-flag-AT:empty,
+    .bcp-flag-AU:empty,
+    .bcp-flag-AW:empty,
+    .bcp-flag-AX:empty,
+    .bcp-flag-AZ:empty,
+    .bcp-flag-BA:empty,
+    .bcp-flag-BB:empty,
+    .bcp-flag-BD:empty,
+    .bcp-flag-BE:empty,
+    .bcp-flag-BG:empty,
+    .bcp-flag-BH:empty,
+    .bcp-flag-BI:empty,
+    .bcp-flag-BJ:empty,
+    .bcp-flag-BL:empty,
+    .bcp-flag-BM:empty,
+    .bcp-flag-BN:empty,
+    .bcp-flag-BO:empty,
+    .bcp-flag-BR:empty,
+    .bcp-flag-BS:empty,
+    .bcp-flag-BT:empty,
+    .bcp-flag-BW:empty,
+    .bcp-flag-BY:empty,
+    .bcp-flag-BZ:empty,
+    .bcp-flag-CA:empty,
+    .bcp-flag-CD:empty,
+    .bcp-flag-CF:empty,
+    .bcp-flag-CG:empty,
+    .bcp-flag-CH:empty,
+    .bcp-flag-CI:empty,
+    .bcp-flag-CL:empty,
+    .bcp-flag-CM:empty,
+    .bcp-flag-CN:empty,
+    .bcp-flag-CO:empty,
+    .bcp-flag-CR:empty,
+    .bcp-flag-CV:empty,
+    .bcp-flag-CY:empty,
+    .bcp-flag-CZ:empty,
+    .bcp-flag-DJ:empty,
+    .bcp-flag-DK:empty,
+    .bcp-flag-DM:empty,
+    .bcp-flag-DO:empty,
+    .bcp-flag-DZ:empty,
+    .bcp-flag-EC:empty,
+    .bcp-flag-EE:empty,
+    .bcp-flag-EG:empty,
+    .bcp-flag-EH:empty,
+    .bcp-flag-ER:empty,
+    .bcp-flag-ES:empty,
+    .bcp-flag-ET:empty,
+    .bcp-flag-EU:empty,
+    .bcp-flag-FI:empty,
+    .bcp-flag-FJ:empty,
+    .bcp-flag-FK:empty,
+    .bcp-flag-FM:empty,
+    .bcp-flag-FO:empty,
+    .bcp-flag-FR:empty,
+    .bcp-flag-FX:empty,
+    .bcp-flag-GF:empty,
+    .bcp-flag-GP:empty,
+    .bcp-flag-MQ:empty,
+    .bcp-flag-NC:empty,
+    .bcp-flag-PF:empty,
+    .bcp-flag-PM:empty,
+    .bcp-flag-RE:empty,
+    .bcp-flag-TF:empty,
+    .bcp-flag-WF:empty,
+    .bcp-flag-GA:empty,
+    .bcp-flag-GB:empty,
+    .bcp-flag-GD:empty,
+    .bcp-flag-GE:empty,
+    .bcp-flag-GG:empty,
+    .bcp-flag-GH:empty,
+    .bcp-flag-GL:empty,
+    .bcp-flag-GM:empty,
+    .bcp-flag-GN:empty,
+    .bcp-flag-GQ:empty,
+    .bcp-flag-GR:empty,
+    .bcp-flag-GS:empty,
+    .bcp-flag-GT:empty,
+    .bcp-flag-GU:empty,
+    .bcp-flag-GW:empty,
+    .bcp-flag-GY:empty,
+    .bcp-flag-HK:empty,
+    .bcp-flag-HN:empty,
+    .bcp-flag-HR:empty,
+    .bcp-flag-HT:empty,
+    .bcp-flag-HU:empty,
+    .bcp-flag-ID:empty,
+    .bcp-flag-IE:empty,
+    .bcp-flag-IL:empty,
+    .bcp-flag-IM:empty,
+    .bcp-flag-IN:empty,
+    .bcp-flag-IQ:empty,
+    .bcp-flag-IS:empty,
+    .bcp-flag-IT:empty,
+    .bcp-flag-JE:empty,
+    .bcp-flag-JM:empty,
+    .bcp-flag-JO:empty,
+    .bcp-flag-JP:empty,
+    .bcp-flag-KE:empty,
+    .bcp-flag-KG:empty,
+    .bcp-flag-KH:empty,
+    .bcp-flag-KI:empty,
+    .bcp-flag-KM:empty,
+    .bcp-flag-KN:empty,
+    .bcp-flag-KP:empty,
+    .bcp-flag-KR:empty,
+    .bcp-flag-KV:empty,
+    .bcp-flag-KW:empty,
+    .bcp-flag-KY:empty,
+    .bcp-flag-LA:empty,
+    .bcp-flag-LC:empty,
+    .bcp-flag-LK:empty,
+    .bcp-flag-LR:empty,
+    .bcp-flag-LS:empty,
+    .bcp-flag-LT:empty,
+    .bcp-flag-LU:empty,
+    .bcp-flag-LV:empty,
+    .bcp-flag-LY:empty,
+    .bcp-flag-MA:empty,
+    .bcp-flag-ME:empty,
+    .bcp-flag-MG:empty,
+    .bcp-flag-MH:empty,
+    .bcp-flag-ML:empty,
+    .bcp-flag-MM:empty,
+    .bcp-flag-MP:empty,
+    .bcp-flag-MR:empty,
+    .bcp-flag-MS:empty,
+    .bcp-flag-MT:empty,
+    .bcp-flag-MU:empty,
+    .bcp-flag-MV:empty,
+    .bcp-flag-MW:empty,
+    .bcp-flag-MZ:empty,
+    .bcp-flag-NA:empty,
+    .bcp-flag-NE:empty,
+    .bcp-flag-NF:empty,
+    .bcp-flag-NG:empty,
+    .bcp-flag-NI:empty,
+    .bcp-flag-NL:empty,
+    .bcp-flag-NO:empty,
+    .bcp-flag-NP:empty,
+    .bcp-flag-NR:empty,
+    .bcp-flag-NZ:empty,
+    .bcp-flag-OM:empty,
+    .bcp-flag-PA:empty,
+    .bcp-flag-PE:empty,
+    .bcp-flag-PG:empty,
+    .bcp-flag-PH:empty,
+    .bcp-flag-PK:empty,
+    .bcp-flag-PL:empty,
+    .bcp-flag-PN:empty,
+    .bcp-flag-PS:empty,
+    .bcp-flag-PT:empty,
+    .bcp-flag-PW:empty,
+    .bcp-flag-PY:empty,
+    .bcp-flag-QA:empty,
+    .bcp-flag-RS:empty,
+    .bcp-flag-RU:empty,
+    .bcp-flag-RW:empty,
+    .bcp-flag-SA:empty,
+    .bcp-flag-SB:empty,
+    .bcp-flag-SC:empty,
+    .bcp-flag-SD:empty,
+    .bcp-flag-SE:empty,
+    .bcp-flag-SG:empty,
+    .bcp-flag-SH:empty,
+    .bcp-flag-SI:empty,
+    .bcp-flag-SK:empty,
+    .bcp-flag-SM:empty,
+    .bcp-flag-SN:empty,
+    .bcp-flag-SO:empty,
+    .bcp-flag-SR:empty,
+    .bcp-flag-SS:empty,
+    .bcp-flag-ST:empty,
+    .bcp-flag-SV:empty,
+    .bcp-flag-SY:empty,
+    .bcp-flag-SZ:empty,
+    .bcp-flag-TC:empty,
+    .bcp-flag-TD:empty,
+    .bcp-flag-TG:empty,
+    .bcp-flag-TH:empty,
+    .bcp-flag-TJ:empty,
+    .bcp-flag-TM:empty,
+    .bcp-flag-TN:empty,
+    .bcp-flag-TP:empty,
+    .bcp-flag-TR:empty,
+    .bcp-flag-TT:empty,
+    .bcp-flag-TV:empty,
+    .bcp-flag-TW:empty,
+    .bcp-flag-TZ:empty,
+    .bcp-flag-UA:empty,
+    .bcp-flag-UG:empty,
+    .bcp-flag-US:empty,
+    .bcp-flag-UY:empty,
+    .bcp-flag-UZ:empty,
+    .bcp-flag-VC:empty,
+    .bcp-flag-VE:empty,
+    .bcp-flag-VG:empty,
+    .bcp-flag-VI:empty,
+    .bcp-flag-VN:empty,
+    .bcp-flag-VU:empty,
+    .bcp-flag-WS:empty,
+    .bcp-flag-YE:empty,
+    .bcp-flag-ZA:empty,
+    .bcp-flag-ZM:empty,
+    .bcp-flag-BF:empty,
+    .bcp-flag-CU:empty,
+    .bcp-flag-DE:empty,
+    .bcp-flag-IR:empty,
+    .bcp-flag-KZ:empty,
+    .bcp-flag-LB:empty,
+    .bcp-flag-LI:empty,
+    .bcp-flag-MC:empty,
+    .bcp-flag-MD:empty,
+    .bcp-flag-MK:empty,
+    .bcp-flag-MN:empty,
+    .bcp-flag-MO:empty,
+    .bcp-flag-MX:empty,
+    .bcp-flag-MY:empty,
+    .bcp-flag-PR:empty,
+    .bcp-flag-RO:empty,
+    .bcp-flag-SL:empty,
+    .bcp-flag-TO:empty,
+    .bcp-flag-VA:empty,
+    .bcp-flag-ZW:empty {
+        width: 16px;
+    }
+
+.bcp-flag-AD,
+.bcp-flag-AE,
+.bcp-flag-AF,
+.bcp-flag-AG,
+.bcp-flag-AI,
+.bcp-flag-AL,
+.bcp-flag-AM,
+.bcp-flag-AN,
+.bcp-flag-AO,
+.bcp-flag-AQ,
+.bcp-flag-AR,
+.bcp-flag-AS,
+.bcp-flag-AT,
+.bcp-flag-AU,
+.bcp-flag-AW,
+.bcp-flag-AX,
+.bcp-flag-AZ,
+.bcp-flag-BA,
+.bcp-flag-BB,
+.bcp-flag-BD,
+.bcp-flag-BE,
+.bcp-flag-BG,
+.bcp-flag-BH,
+.bcp-flag-BI,
+.bcp-flag-BJ,
+.bcp-flag-BL,
+.bcp-flag-BM,
+.bcp-flag-BN,
+.bcp-flag-BO,
+.bcp-flag-BR,
+.bcp-flag-BS,
+.bcp-flag-BT,
+.bcp-flag-BW,
+.bcp-flag-BY,
+.bcp-flag-BZ,
+.bcp-flag-CA,
+.bcp-flag-CD,
+.bcp-flag-CF,
+.bcp-flag-CG,
+.bcp-flag-CH,
+.bcp-flag-CI,
+.bcp-flag-CL,
+.bcp-flag-CM,
+.bcp-flag-CN,
+.bcp-flag-CO,
+.bcp-flag-CR,
+.bcp-flag-CV,
+.bcp-flag-CY,
+.bcp-flag-CZ,
+.bcp-flag-DJ,
+.bcp-flag-DK,
+.bcp-flag-DM,
+.bcp-flag-DO,
+.bcp-flag-DZ,
+.bcp-flag-EC,
+.bcp-flag-EE,
+.bcp-flag-EG,
+.bcp-flag-EH,
+.bcp-flag-ER,
+.bcp-flag-ES,
+.bcp-flag-ET,
+.bcp-flag-EU,
+.bcp-flag-FI,
+.bcp-flag-FJ,
+.bcp-flag-FK,
+.bcp-flag-FM,
+.bcp-flag-FO,
+.bcp-flag-FR,
+.bcp-flag-FX,
+.bcp-flag-GF,
+.bcp-flag-GP,
+.bcp-flag-MQ,
+.bcp-flag-NC,
+.bcp-flag-PF,
+.bcp-flag-PM,
+.bcp-flag-RE,
+.bcp-flag-TF,
+.bcp-flag-WF,
+.bcp-flag-GA,
+.bcp-flag-GB,
+.bcp-flag-GD,
+.bcp-flag-GE,
+.bcp-flag-GG,
+.bcp-flag-GH,
+.bcp-flag-GL,
+.bcp-flag-GM,
+.bcp-flag-GN,
+.bcp-flag-GQ,
+.bcp-flag-GR,
+.bcp-flag-GS,
+.bcp-flag-GT,
+.bcp-flag-GU,
+.bcp-flag-GW,
+.bcp-flag-GY,
+.bcp-flag-HK,
+.bcp-flag-HN,
+.bcp-flag-HR,
+.bcp-flag-HT,
+.bcp-flag-HU,
+.bcp-flag-ID,
+.bcp-flag-IE,
+.bcp-flag-IL,
+.bcp-flag-IM,
+.bcp-flag-IN,
+.bcp-flag-IQ,
+.bcp-flag-IS,
+.bcp-flag-IT,
+.bcp-flag-JE,
+.bcp-flag-JM,
+.bcp-flag-JO,
+.bcp-flag-JP,
+.bcp-flag-KE,
+.bcp-flag-KG,
+.bcp-flag-KH,
+.bcp-flag-KI,
+.bcp-flag-KM,
+.bcp-flag-KN,
+.bcp-flag-KP,
+.bcp-flag-KR,
+.bcp-flag-KV,
+.bcp-flag-KW,
+.bcp-flag-KY,
+.bcp-flag-LA,
+.bcp-flag-LC,
+.bcp-flag-LK,
+.bcp-flag-LR,
+.bcp-flag-LS,
+.bcp-flag-LT,
+.bcp-flag-LU,
+.bcp-flag-LV,
+.bcp-flag-LY,
+.bcp-flag-MA,
+.bcp-flag-ME,
+.bcp-flag-MG,
+.bcp-flag-MH,
+.bcp-flag-ML,
+.bcp-flag-MM,
+.bcp-flag-MP,
+.bcp-flag-MR,
+.bcp-flag-MS,
+.bcp-flag-MT,
+.bcp-flag-MU,
+.bcp-flag-MV,
+.bcp-flag-MW,
+.bcp-flag-MZ,
+.bcp-flag-NA,
+.bcp-flag-NE,
+.bcp-flag-NF,
+.bcp-flag-NG,
+.bcp-flag-NI,
+.bcp-flag-NL,
+.bcp-flag-NO,
+.bcp-flag-NP,
+.bcp-flag-NR,
+.bcp-flag-NZ,
+.bcp-flag-OM,
+.bcp-flag-PA,
+.bcp-flag-PE,
+.bcp-flag-PG,
+.bcp-flag-PH,
+.bcp-flag-PK,
+.bcp-flag-PL,
+.bcp-flag-PN,
+.bcp-flag-PS,
+.bcp-flag-PT,
+.bcp-flag-PW,
+.bcp-flag-PY,
+.bcp-flag-QA,
+.bcp-flag-RS,
+.bcp-flag-RU,
+.bcp-flag-RW,
+.bcp-flag-SA,
+.bcp-flag-SB,
+.bcp-flag-SC,
+.bcp-flag-SD,
+.bcp-flag-SE,
+.bcp-flag-SG,
+.bcp-flag-SH,
+.bcp-flag-SI,
+.bcp-flag-SK,
+.bcp-flag-SM,
+.bcp-flag-SN,
+.bcp-flag-SO,
+.bcp-flag-SR,
+.bcp-flag-SS,
+.bcp-flag-ST,
+.bcp-flag-SV,
+.bcp-flag-SY,
+.bcp-flag-SZ,
+.bcp-flag-TC,
+.bcp-flag-TD,
+.bcp-flag-TG,
+.bcp-flag-TH,
+.bcp-flag-TJ,
+.bcp-flag-TM,
+.bcp-flag-TN,
+.bcp-flag-TP,
+.bcp-flag-TR,
+.bcp-flag-TT,
+.bcp-flag-TV,
+.bcp-flag-TW,
+.bcp-flag-TZ,
+.bcp-flag-UA,
+.bcp-flag-UG,
+.bcp-flag-US,
+.bcp-flag-UY,
+.bcp-flag-UZ,
+.bcp-flag-VC,
+.bcp-flag-VE,
+.bcp-flag-VG,
+.bcp-flag-VI,
+.bcp-flag-VN,
+.bcp-flag-VU,
+.bcp-flag-WS,
+.bcp-flag-YE,
+.bcp-flag-ZA,
+.bcp-flag-ZM,
+.bcp-flag-BF,
+.bcp-flag-CU,
+.bcp-flag-DE,
+.bcp-flag-IR,
+.bcp-flag-KZ,
+.bcp-flag-LB,
+.bcp-flag-LI,
+.bcp-flag-MC,
+.bcp-flag-MD,
+.bcp-flag-MK,
+.bcp-flag-MN,
+.bcp-flag-MO,
+.bcp-flag-MX,
+.bcp-flag-MY,
+.bcp-flag-PR,
+.bcp-flag-RO,
+.bcp-flag-SL,
+.bcp-flag-TO,
+.bcp-flag-VA,
+.bcp-flag-ZW,
+.bcp-flag-EUR,
+.bcp-flag-XCD {
+    margin-right: 5px;
+}
+
+.bcp-flag-AD {
+    background-position: -1921px 0;
+}
+
+.bcp-flag-AE {
+    background-position: -1904px 0;
+}
+
+.bcp-flag-AF {
+    background-position: -3689px 0;
+}
+
+.bcp-flag-AG {
+    background-position: -34px 0;
+}
+
+.bcp-flag-AI {
+    background-position: -51px 0;
+}
+
+.bcp-flag-AL {
+    background-position: -68px 0;
+}
+
+.bcp-flag-AM {
+    background-position: -85px 0;
+}
+
+.bcp-flag-AN {
+    background-position: -102px 0;
+}
+
+.bcp-flag-AO {
+    background-position: -119px 0;
+}
+
+.bcp-flag-AQ {
+    background-position: -136px 0;
+}
+
+.bcp-flag-AR {
+    background-position: -153px 0;
+}
+
+.bcp-flag-AS {
+    background-position: -170px 0;
+}
+
+.bcp-flag-AT {
+    background-position: -187px 0;
+}
+
+.bcp-flag-AU {
+    background-position: -204px 0;
+}
+
+.bcp-flag-AW {
+    background-position: -221px 0;
+}
+
+.bcp-flag-AX {
+    background-position: -238px 0;
+}
+
+.bcp-flag-AZ {
+    background-position: -255px 0;
+}
+
+.bcp-flag-BA {
+    background-position: -272px 0;
+}
+
+.bcp-flag-BB {
+    background-position: -289px 0;
+}
+
+.bcp-flag-BD {
+    background-position: -306px 0;
+}
+
+.bcp-flag-BE {
+    background-position: -323px 0;
+}
+
+.bcp-flag-BG {
+    background-position: -340px 0;
+}
+
+.bcp-flag-BH {
+    background-position: -357px 0;
+}
+
+.bcp-flag-BI {
+    background-position: -374px 0;
+}
+
+.bcp-flag-BJ {
+    background-position: -391px 0;
+}
+
+.bcp-flag-BL {
+    background-position: -408px 0;
+}
+
+.bcp-flag-BM {
+    background-position: -425px 0;
+}
+
+.bcp-flag-BN {
+    background-position: -442px 0;
+}
+
+.bcp-flag-BO {
+    background-position: -459px 0;
+}
+
+.bcp-flag-BR {
+    background-position: -476px 0;
+}
+
+.bcp-flag-BS {
+    background-position: -493px 0;
+}
+
+.bcp-flag-BT {
+    background-position: -510px 0;
+}
+
+.bcp-flag-BW {
+    background-position: -527px 0;
+}
+
+.bcp-flag-BY {
+    background-position: -544px 0;
+}
+
+.bcp-flag-BZ {
+    background-position: -561px 0;
+}
+
+.bcp-flag-CA {
+    background-position: -578px 0;
+}
+
+.bcp-flag-CD {
+    background-position: -595px 0;
+}
+
+.bcp-flag-CF {
+    background-position: -612px 0;
+}
+
+.bcp-flag-CG {
+    background-position: -629px 0;
+}
+
+.bcp-flag-CH {
+    background-position: -646px 0;
+}
+
+.bcp-flag-CI {
+    background-position: -663px 0;
+}
+
+.bcp-flag-CL {
+    background-position: -680px 0;
+}
+
+.bcp-flag-CM {
+    background-position: -697px 0;
+}
+
+.bcp-flag-CN {
+    background-position: -714px 0;
+}
+
+.bcp-flag-CO {
+    background-position: -731px 0;
+}
+
+.bcp-flag-CR {
+    background-position: -748px 0;
+}
+
+.bcp-flag-CV {
+    background-position: -765px 0;
+}
+
+.bcp-flag-CY {
+    background-position: -782px 0;
+}
+
+.bcp-flag-CZ {
+    background-position: -799px 0;
+}
+
+.bcp-flag-DJ {
+    background-position: -816px 0;
+}
+
+.bcp-flag-DK {
+    background-position: -833px 0;
+}
+
+.bcp-flag-DM {
+    background-position: -850px 0;
+}
+
+.bcp-flag-DO {
+    background-position: -867px 0;
+}
+
+.bcp-flag-DZ {
+    background-position: -884px 0;
+}
+
+.bcp-flag-EC {
+    background-position: -901px 0;
+}
+
+.bcp-flag-EE {
+    background-position: -918px 0;
+}
+
+.bcp-flag-EG {
+    background-position: -935px 0;
+}
+
+.bcp-flag-EH {
+    background-position: -952px 0;
+}
+
+.bcp-flag-ER {
+    background-position: -969px 0;
+}
+
+.bcp-flag-ES {
+    background-position: -986px 0;
+}
+
+.bcp-flag-ET {
+    background-position: -1003px 0;
+}
+
+.bcp-flag-EU {
+    background-position: -1020px 0;
+}
+
+.bcp-flag-FI {
+    background-position: -1037px 0;
+}
+
+.bcp-flag-FJ {
+    background-position: -1054px 0;
+}
+
+.bcp-flag-FK {
+    background-position: -1071px 0;
+}
+
+.bcp-flag-FM {
+    background-position: -1088px 0;
+}
+
+.bcp-flag-FO {
+    background-position: -1105px 0;
+}
+
+.bcp-flag-FR,
+.bcp-flag-FX,
+.bcp-flag-GF,
+.bcp-flag-GP,
+.bcp-flag-MQ,
+.bcp-flag-NC,
+.bcp-flag-PF,
+.bcp-flag-PM,
+.bcp-flag-RE,
+.bcp-flag-TF,
+.bcp-flag-WF {
+    background-position: -1122px 0;
+}
+
+.bcp-flag-GA {
+    background-position: -1139px 0;
+}
+
+.bcp-flag-GB {
+    background-position: -1156px 0;
+}
+
+.bcp-flag-GD {
+    background-position: -1173px 0;
+}
+
+.bcp-flag-GE {
+    background-position: -1190px 0;
+}
+
+.bcp-flag-GG {
+    background-position: -1207px 0;
+}
+
+.bcp-flag-GH {
+    background-position: -1224px 0;
+}
+
+.bcp-flag-GL {
+    background-position: -1241px 0;
+}
+
+.bcp-flag-GM {
+    background-position: -1258px 0;
+}
+
+.bcp-flag-GN {
+    background-position: -1275px 0;
+}
+
+.bcp-flag-GQ {
+    background-position: -1292px 0;
+}
+
+.bcp-flag-GR {
+    background-position: -1309px 0;
+}
+
+.bcp-flag-GS {
+    background-position: -1326px 0;
+}
+
+.bcp-flag-GT {
+    background-position: -1343px 0;
+}
+
+.bcp-flag-GU {
+    background-position: -1360px 0;
+}
+
+.bcp-flag-GW {
+    background-position: -1377px 0;
+}
+
+.bcp-flag-GY {
+    background-position: -1394px 0;
+}
+
+.bcp-flag-HK {
+    background-position: -1411px 0;
+}
+
+.bcp-flag-HN {
+    background-position: -1428px 0;
+}
+
+.bcp-flag-HR {
+    background-position: -1445px 0;
+}
+
+.bcp-flag-HT {
+    background-position: -1462px 0;
+}
+
+.bcp-flag-HU {
+    background-position: -1479px 0;
+}
+
+.bcp-flag-ID {
+    background-position: -1496px 0;
+}
+
+.bcp-flag-IE {
+    background-position: -1513px 0;
+}
+
+.bcp-flag-IL {
+    background-position: -1530px 0;
+}
+
+.bcp-flag-IM {
+    background-position: -1547px 0;
+}
+
+.bcp-flag-IN {
+    background-position: -1564px 0;
+}
+
+.bcp-flag-IQ {
+    background-position: -1581px 0;
+}
+
+.bcp-flag-IS {
+    background-position: -1598px 0;
+}
+
+.bcp-flag-IT {
+    background-position: -1615px 0;
+}
+
+.bcp-flag-JE {
+    background-position: -1632px 0;
+}
+
+.bcp-flag-JM {
+    background-position: -1649px 0;
+}
+
+.bcp-flag-JO {
+    background-position: -1666px 0;
+}
+
+.bcp-flag-JP {
+    background-position: -1683px 0;
+}
+
+.bcp-flag-KE {
+    background-position: -1700px 0;
+}
+
+.bcp-flag-KG {
+    background-position: -1717px 0;
+}
+
+.bcp-flag-KH {
+    background-position: -1734px 0;
+}
+
+.bcp-flag-KI {
+    background-position: -1751px 0;
+}
+
+.bcp-flag-KM {
+    background-position: -1768px 0;
+}
+
+.bcp-flag-KN {
+    background-position: -1785px 0;
+}
+
+.bcp-flag-KP {
+    background-position: -1802px 0;
+}
+
+.bcp-flag-KR {
+    background-position: -1819px 0;
+}
+
+.bcp-flag-KV {
+    background-position: -1836px 0;
+}
+
+.bcp-flag-KW {
+    background-position: -1853px 0;
+}
+
+.bcp-flag-KY {
+    background-position: -1870px 0;
+}
+
+.bcp-flag-LA {
+    background-position: -1887px 0;
+}
+
+.bcp-flag-LC {
+    background-position: 0 0;
+}
+
+.bcp-flag-LK {
+    background-position: -17px 0;
+}
+
+.bcp-flag-LR {
+    background-position: -1938px 0;
+}
+
+.bcp-flag-LS {
+    background-position: -1955px 0;
+}
+
+.bcp-flag-LT {
+    background-position: -1972px 0;
+}
+
+.bcp-flag-LU {
+    background-position: -1989px 0;
+}
+
+.bcp-flag-LV {
+    background-position: -2006px 0;
+}
+
+.bcp-flag-LY {
+    background-position: -2023px 0;
+}
+
+.bcp-flag-MA {
+    background-position: -2040px 0;
+}
+
+.bcp-flag-ME {
+    background-position: -2057px 0;
+}
+
+.bcp-flag-MG {
+    background-position: -2074px 0;
+}
+
+.bcp-flag-MH {
+    background-position: -2091px 0;
+}
+
+.bcp-flag-ML {
+    background-position: -2108px 0;
+}
+
+.bcp-flag-MM {
+    background-position: -2125px 0;
+}
+
+.bcp-flag-MP {
+    background-position: -2142px 0;
+}
+
+.bcp-flag-MR {
+    background-position: -2159px 0;
+}
+
+.bcp-flag-MS {
+    background-position: -2176px 0;
+}
+
+.bcp-flag-MT {
+    background-position: -2193px 0;
+}
+
+.bcp-flag-MU {
+    background-position: -2210px 0;
+}
+
+.bcp-flag-MV {
+    background-position: -2227px 0;
+}
+
+.bcp-flag-MW {
+    background-position: -2244px 0;
+}
+
+.bcp-flag-MZ {
+    background-position: -2261px 0;
+}
+
+.bcp-flag-NA {
+    background-position: -2278px 0;
+}
+
+.bcp-flag-NE {
+    background-position: -2295px 0;
+}
+
+.bcp-flag-NF {
+    background-position: -2312px 0;
+}
+
+.bcp-flag-NG {
+    background-position: -2329px 0;
+}
+
+.bcp-flag-NI {
+    background-position: -2346px 0;
+}
+
+.bcp-flag-NL {
+    background-position: -2363px 0;
+}
+
+.bcp-flag-NO {
+    background-position: -2380px 0;
+}
+
+.bcp-flag-NP {
+    background-position: -2397px 0;
+}
+
+.bcp-flag-NR {
+    background-position: -2414px 0;
+}
+
+.bcp-flag-NZ {
+    background-position: -2431px 0;
+}
+
+.bcp-flag-OM {
+    background-position: -2448px 0;
+}
+
+.bcp-flag-PA {
+    background-position: -2465px 0;
+}
+
+.bcp-flag-PE {
+    background-position: -2482px 0;
+}
+
+.bcp-flag-PG {
+    background-position: -2499px 0;
+}
+
+.bcp-flag-PH {
+    background-position: -2516px 0;
+}
+
+.bcp-flag-PK {
+    background-position: -2533px 0;
+}
+
+.bcp-flag-PL {
+    background-position: -2550px 0;
+}
+
+.bcp-flag-PN {
+    background-position: -2567px 0;
+}
+
+.bcp-flag-PS {
+    background-position: -2584px 0;
+}
+
+.bcp-flag-PT {
+    background-position: -2601px 0;
+}
+
+.bcp-flag-PW {
+    background-position: -2618px 0;
+}
+
+.bcp-flag-PY {
+    background-position: -2635px 0;
+}
+
+.bcp-flag-QA {
+    background-position: -2652px 0;
+}
+
+.bcp-flag-RS {
+    background-position: -2669px 0;
+}
+
+.bcp-flag-RU {
+    background-position: -2686px 0;
+}
+
+.bcp-flag-RW {
+    background-position: -2703px 0;
+}
+
+.bcp-flag-SA {
+    background-position: -2720px 0;
+}
+
+.bcp-flag-SB {
+    background-position: -2737px 0;
+}
+
+.bcp-flag-SC {
+    background-position: -2754px 0;
+}
+
+.bcp-flag-SD {
+    background-position: -2771px 0;
+}
+
+.bcp-flag-SE {
+    background-position: -2788px 0;
+}
+
+.bcp-flag-SG {
+    background-position: -2805px 0;
+}
+
+.bcp-flag-SH {
+    background-position: -2822px 0;
+}
+
+.bcp-flag-SI {
+    background-position: -2839px 0;
+}
+
+.bcp-flag-SK {
+    background-position: -2856px 0;
+}
+
+.bcp-flag-SM {
+    background-position: -2873px 0;
+}
+
+.bcp-flag-SN {
+    background-position: -2890px 0;
+}
+
+.bcp-flag-SO {
+    background-position: -2907px 0;
+}
+
+.bcp-flag-SR {
+    background-position: -2924px 0;
+}
+
+.bcp-flag-SS {
+    background-position: -2941px 0;
+}
+
+.bcp-flag-ST {
+    background-position: -2958px 0;
+}
+
+.bcp-flag-SV {
+    background-position: -2975px 0;
+}
+
+.bcp-flag-SY {
+    background-position: -2992px 0;
+}
+
+.bcp-flag-SZ {
+    background-position: -3009px 0;
+}
+
+.bcp-flag-TC {
+    background-position: -3026px 0;
+}
+
+.bcp-flag-TD {
+    background-position: -3043px 0;
+}
+
+.bcp-flag-TG {
+    background-position: -3060px 0;
+}
+
+.bcp-flag-TH {
+    background-position: -3077px 0;
+}
+
+.bcp-flag-TJ {
+    background-position: -3094px 0;
+}
+
+.bcp-flag-TM {
+    background-position: -3111px 0;
+}
+
+.bcp-flag-TN {
+    background-position: -3128px 0;
+}
+
+.bcp-flag-TP {
+    background-position: -3145px 0;
+}
+
+.bcp-flag-TR {
+    background-position: -3162px 0;
+}
+
+.bcp-flag-TT {
+    background-position: -3179px 0;
+}
+
+.bcp-flag-TV {
+    background-position: -3196px 0;
+}
+
+.bcp-flag-TW {
+    background-position: -3213px 0;
+}
+
+.bcp-flag-TZ {
+    background-position: -3230px 0;
+}
+
+.bcp-flag-UA {
+    background-position: -3247px 0;
+}
+
+.bcp-flag-UG {
+    background-position: -3264px 0;
+}
+
+.bcp-flag-US {
+    background-position: -3281px 0;
+}
+
+.bcp-flag-UY {
+    background-position: -3298px 0;
+}
+
+.bcp-flag-UZ {
+    background-position: -3315px 0;
+}
+
+.bcp-flag-VC {
+    background-position: -3332px 0;
+}
+
+.bcp-flag-VE {
+    background-position: -3349px 0;
+}
+
+.bcp-flag-VG {
+    background-position: -3366px 0;
+}
+
+.bcp-flag-VI {
+    background-position: -3383px 0;
+}
+
+.bcp-flag-VN {
+    background-position: -3400px 0;
+}
+
+.bcp-flag-VU {
+    background-position: -3417px 0;
+}
+
+.bcp-flag-WS {
+    background-position: -3434px 0;
+}
+
+.bcp-flag-YE {
+    background-position: -3451px 0;
+}
+
+.bcp-flag-ZA {
+    background-position: -3468px 0;
+}
+
+.bcp-flag-ZM {
+    background-position: -3485px 0;
+}
+
+.bcp-flag-BF {
+    background-position: -3502px 0;
+}
+
+.bcp-flag-CU {
+    background-position: -3519px 0;
+}
+
+.bcp-flag-DE {
+    background-position: -3536px 0;
+}
+
+.bcp-flag-IR {
+    background-position: -3553px 0;
+}
+
+.bcp-flag-KZ {
+    background-position: -3570px 0;
+}
+
+.bcp-flag-LB {
+    background-position: -3587px 0;
+}
+
+.bcp-flag-LI {
+    background-position: -3604px 0;
+}
+
+.bcp-flag-MC {
+    background-position: -3621px 0;
+}
+
+.bcp-flag-MD {
+    background-position: -3638px 0;
+}
+
+.bcp-flag-MK {
+    background-position: -3655px 0;
+}
+
+.bcp-flag-MN {
+    background-position: -3672px 0;
+}
+
+.bcp-flag-MO {
+    background-position: -3706px 0;
+}
+
+.bcp-flag-MX {
+    background-position: -3723px 0;
+}
+
+.bcp-flag-MY {
+    background-position: -3740px 0;
+}
+
+.bcp-flag-PR {
+    background-position: -3757px 0;
+}
+
+.bcp-flag-RO {
+    background-position: -3774px 0;
+}
+
+.bcp-flag-SL {
+    background-position: -3791px 0;
+}
+
+.bcp-flag-TO {
+    background-position: -3808px 0;
+}
+
+.bcp-flag-VA {
+    background-position: -3825px 0;
+}
+
+.bcp-flag-ZW {
+    background-position: -3842px 0;
+}
+
+.bcp-selectbox {
+    position: relative;
+}
+
+    .bcp-selectbox .bcp-selectbox-toggle {
+        display: inline-block;
+        padding: 6px 24px 6px 12px;
+        text-decoration: none;
+    }
+
+        .bcp-selectbox .bcp-selectbox-toggle:focus {
+            outline: 0;
+        }
+
+        .bcp-selectbox .bcp-selectbox-toggle .bcp-selectbox-option {
+            display: inline-block;
+            float: left;
+            width: 100%;
+            height: 20px;
+            overflow: hidden;
+            -moz-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+        }
+
+        .bcp-selectbox .bcp-selectbox-toggle .selectbox-caret {
+            float: right;
+            margin-top: 8px;
+            margin-right: -16px;
+            margin-left: -10px;
+        }
+
+    .bcp-selectbox .bcp-selectbox-options {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        -moz-min-width: 90px;
+        -ms-min-width: 90px;
+        -o-min-width: 90px;
+        -webkit-min-width: 90px;
+        min-width: 90px;
+        padding: 5px 0;
+        margin: -1px 0 0;
+        font-size: 14px;
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        -ms-border-radius: 4px;
+        border-radius: 4px;
+        -webkit-box-shadow: 0 6px 12px #e2e2e2;
+        -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        -ms-box-shadow: 0 6px 12px #e2e2e2;
+        -ms-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        box-shadow: 0 6px 12px #e2e2e2;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+        -ms-background-clip: padding-box;
+        background-clip: padding-box;
+    }
+
+.bcp-selectbox .bcp-selectbox-options.pull-right {
+            right: 0;
+            left: auto;
+        }
+
+        .bcp-selectbox .bcp-selectbox-options .divider {
+            height: 1px;
+            margin: 9px 0;
+            overflow: hidden;
+            background-color: #e5e5e5;
+        }
+
+        .bcp-selectbox .bcp-selectbox-options .bcp-selectbox-filter-container {
+            width: 100%;
+            padding: 5px;
+        }
+
+        .bcp-selectbox .bcp-selectbox-options ul {
+            max-width: 500px;
+            max-height: 200px;
+            padding: 0;
+            margin: 5px 0 0 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+            list-style: none;
+        }
+
+            .bcp-selectbox .bcp-selectbox-options ul li > a {
+                display: block;
+                width: 100%;
+                min-height: 26px;
+                padding: 3px 20px;
+                overflow-x: hidden;
+                clear: both;
+                font-weight: normal;
+                line-height: 1.428571429;
+                color: #333333;
+                -moz-text-overflow: ellipsis;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+
+                .bcp-selectbox .bcp-selectbox-options ul li > a:hover,
+                .bcp-selectbox .bcp-selectbox-options ul li > a:focus {
+                    color: #262626;
+                    text-decoration: none;
+                    background-color: #f5f5f5;
+                }
+
+            .bcp-selectbox .bcp-selectbox-options ul .bcp-selectbox-options-header {
+                display: block;
+                padding: 3px 20px;
+                font-size: 12px;
+                line-height: 1.428571429;
+                color: #999999;
+            }
+
+            .bcp-selectbox .bcp-selectbox-options ul .disabled > a {
+                color: #999999;
+            }
+
+                .bcp-selectbox .bcp-selectbox-options ul .disabled > a:hover,
+                .bcp-selectbox .bcp-selectbox-options ul .disabled > a:focus {
+                    color: #999999;
+                    text-decoration: none;
+                    cursor: not-allowed;
+                    background-color: transparent;
+                    background-image: none;
+                    -webkit-filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+                    -moz-filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+                    -o-filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+                    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+                }
+
+    .bcp-selectbox.open > .bcp-selectbox-options {
+        display: block;
+    }
+
+    .bcp-selectbox.open a {
+        outline: 0;
+    }
+
+.pull-right > .bcp-selectbox-options {
+    right: 0;
+    left: auto;
+}
+
+.bcp-selectbox-up .caret,
+.navbar-fixed-bottom .bcp-selectbox .caret {
+    border-top: 0 dotted;
+    border-bottom: 4px solid #000000;
+    content: "";
+}
+
+.bcp-selectbox-up .bcp-selectbox-options,
+.navbar-fixed-bottom .bcp-selectbox .bcp-selectbox-options {
+    top: auto;
+    bottom: 100%;
+    margin-bottom: 1px;
+}
+
+@media (min-width: 768px) {
+    .navbar-right .bcp-selectbox-options {
+        right: 0;
+        left: auto;
+    }
+}
+
+.input-group > .bcp-number {
+    border-right: 0;
+}
+
+.input-group > .bcp-number-btn:hover {
+    background-color: #cccccc;
+}

@@ -1,0 +1,35 @@
+﻿@using Tattoo.Web.Core.Enumerations
+@model Tattoo.Web.Models.AlertPartialViewModel
+@{
+    var classes = "alert";
+    switch (Model.AlertType)
+    {
+        case BootstrapStyle.Default:
+            classes += " alert-info";
+            break;
+        case BootstrapStyle.Primary:
+            classes += " alert-info";
+            break;
+        case BootstrapStyle.Info:
+            classes += " alert-info";
+            break;
+        case BootstrapStyle.Success:
+            classes += " alert-success";
+            break;
+        case BootstrapStyle.Warning:
+            classes += " alert-warning";
+            break;
+        case BootstrapStyle.Danger:
+            classes += " alert-danger";
+            break;
+        default:
+            throw new ArgumentOutOfRangeException();
+    }
+}
+<div class="@classes">
+    @if (!string.IsNullOrEmpty(Model.Subject))
+    {
+        <h4>@Model.Subject</h4>
+    }
+    @Model.Message
+</div>

@@ -1,0 +1,6 @@
+﻿@using System.Globalization
+@model DateTime?
+@if (Model.HasValue && Model.Value != new DateTime())
+{
+    @Model.Value.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern)
+}

@@ -1,0 +1,12 @@
+﻿@model Boolean?
+@{
+    var formattedValue = Model;
+    var checkValue = (!(formattedValue.HasValue && formattedValue.Value)).ToString().ToLower();
+    var hiddenValue = (formattedValue.HasValue && formattedValue.Value).ToString().ToLower();
+}
+
+<div class="squaredThree">
+    <input id="@ViewData.ModelMetadata.PropertyName" type="checkbox" name="@ViewData.ModelMetadata.PropertyName" value="@checkValue" />
+    <label for="@ViewData.ModelMetadata.PropertyName"></label>
+    <input type="hidden" name="@ViewData.ModelMetadata.PropertyName" value="@hiddenValue" />
+</div>

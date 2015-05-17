@@ -1,0 +1,2637 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mvc.RazorTools.FontAwesome</name>
+    </assembly>
+    <members>
+        <member name="T:Mvc.RazorTools.FontAwesome.FontAwesomeStackExtensions">
+            <summary>
+            Provides a set of extension methods for a Mvc.RazorTools.FontAwesome.FontAwesomeStack
+            object to be used within the Razor view.
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStackExtensions.Customize(Mvc.RazorTools.FontAwesome.FontAwesomeStack,System.String[])">
+            <summary>
+            Customizes an existing Mvc.RazorTools.FontAwesome.FontAwesomeStack by adding
+            class attributes and returning the object. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="stack">The existing Mvc.RazorTools.FontAwesome.FontAwesomeStack to modify.</param>
+            <param name="items">The class attributes to be added to the existing instance.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeStack object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStackExtensions.Large1x(Mvc.RazorTools.FontAwesome.FontAwesomeStack)">
+            <summary>
+            Applies the FontAwesomeStyles.Large1x style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="stack">The existing Mvc.RazorTools.FontAwesome.FontAwesomeStack to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeStack object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStackExtensions.Large2x(Mvc.RazorTools.FontAwesome.FontAwesomeStack)">
+            <summary>
+            Applies the FontAwesomeStyles.Large2x style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="stack">The existing Mvc.RazorTools.FontAwesome.FontAwesomeStack to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeStack object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStackExtensions.Large3x(Mvc.RazorTools.FontAwesome.FontAwesomeStack)">
+            <summary>
+            Applies the FontAwesomeStyles.Large3x style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="stack">The existing Mvc.RazorTools.FontAwesome.FontAwesomeStack to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeStack object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStackExtensions.Large4x(Mvc.RazorTools.FontAwesome.FontAwesomeStack)">
+            <summary>
+            Applies the FontAwesomeStyles.Large4x style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="stack">The existing Mvc.RazorTools.FontAwesome.FontAwesomeStack to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeStack object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStackExtensions.Large5x(Mvc.RazorTools.FontAwesome.FontAwesomeStack)">
+            <summary>
+            Applies the FontAwesomeStyles.Large5x style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="stack">The existing Mvc.RazorTools.FontAwesome.FontAwesomeStack to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeStack object.</returns>
+        </member>
+        <member name="T:Mvc.RazorTools.FontAwesome.FontAwesomeStackHtml">
+            <summary>
+            Allows the creating of a Font Awesome Stack using syntax similar to
+            BeginForm.
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStackHtml.#ctor(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            Creates an instance of Mvc.RazorTools.FontAwesome.FontAwesomeStackHtml with the
+            specified System.Web.Mvc.HtmlHelper object.
+            </summary>
+            <param name="html">An instance of System.Web.Mvc.HtmlHelper.</param>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStackHtml.#ctor(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            Creates an instance of Mvc.RazorTools.FontAwesome.FontAwesomeStackHtml with the
+            specified System.Web.Mvc.HtmlHelper object and style.
+            </summary>
+            <param name="html">An instance of System.Web.Mvc.HtmlHelper.</param>
+            <param name="style">A CSS style to be applied to the Span tag.</param>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStackHtml.Dispose">
+            <summary>
+            Disposes this instance causing the remaining HTML to be
+            written to the ViewContext.
+            </summary>
+        </member>
+        <member name="T:Mvc.RazorTools.FontAwesome.FontAwesomeStackHtmlExtensions">
+            <summary>
+            Extensions methods for Mvc.RazorTools.FontAwesome.FontAwesomeStackHtml
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStackHtmlExtensions.BeginFontAwesomeStack(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            Creates an instance of Mvc.RazorTools.FontAwesome.FontAwesomeStackHtml with the
+            specified System.Web.Mvc.HtmlHelper object. Intended to be wrapped in a
+            using statement inside of a Razor View.
+            </summary>
+            <param name="html">An instance of System.Web.Mvc.HtmlHelper.</param>
+            <returns>An instance of Mvc.RazorTools.FontAwesome.FontAwesomeStackHtml.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStackHtmlExtensions.BeginFontAwesomeStack(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            Creates an instance of Mvc.RazorTools.FontAwesome.FontAwesomeStackHtml with the
+            specified System.Web.Mvc.HtmlHelper object and style. Intended to be wrapped in a
+            using statement inside of a Razor View.
+            </summary>
+            <param name="html">An instance of System.Web.Mvc.HtmlHelper.</param>
+            <param name="style">A CSS style to be applied to the Span tag.</param>
+            <returns>An instance of Mvc.RazorTools.FontAwesome.FontAwesomeStackHtml.</returns>
+        </member>
+        <member name="T:Mvc.RazorTools.FontAwesome.FontAwesomeStyles">
+            <summary>
+            Contains a set of predefined class attributes for the Font Awesome
+            icons. The items are defined on the Font Awesome web site and are
+            intended to modify the existing icons in some way. For example, some
+            attributes will rotate the icon, spin it or alter the default size.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.Icon">
+            <summary>
+            Defines the i tag as a Font Awesome icon
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.Large1x">
+            <summary>
+            To increase icon sizes relative to their container, use the fa-lg (33% increase), 
+            fa-2x, fa-3x, fa-4x, or fa-5x classes. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.Large2x">
+            <summary>
+            To increase icon sizes relative to their container, use the fa-lg (33% increase), 
+            fa-2x, fa-3x, fa-4x, or fa-5x classes. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.Large3x">
+            <summary>
+            To increase icon sizes relative to their container, use the fa-lg (33% increase), 
+            fa-2x, fa-3x, fa-4x, or fa-5x classes. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.Large4x">
+            <summary>
+            To increase icon sizes relative to their container, use the fa-lg (33% increase), 
+            fa-2x, fa-3x, fa-4x, or fa-5x classes. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.Large5x">
+            <summary>
+            To increase icon sizes relative to their container, use the fa-lg (33% increase), 
+            fa-2x, fa-3x, fa-4x, or fa-5x classes. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.FixedWidth">
+            <summary>
+            Use fa-fw to set icons at a fixed width. Great to use when variable icon widths 
+            throw off alignment. Especially useful in things like navigation lists. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.UnorderedList">
+            <summary>
+            Use fa-ul and fa-li to easily replace default bullets in unordered lists.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.ListItem">
+            <summary>
+            Use fa-ul and fa-li to easily replace default bullets in unordered lists.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.Border">
+            <summary>
+            Use fa-border and pull-right or pull-left for easy pull quotes or article graphics. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.PullRight">
+            <summary>
+            Use fa-border and pull-right or pull-left for easy pull quotes or article graphics. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.PullLeft">
+            <summary>
+            Use fa-border and pull-right or pull-left for easy pull quotes or article graphics. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.Spin">
+            <summary>
+            Use the fa-spin class to get any icon to rotate. Works well with fa-spinner, fa-refresh, and fa-cog. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.Rotate90">
+            <summary>
+            To arbitrarily rotate and flip icons, use the fa-rotate-* and fa-flip-* classes. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.Rotate180">
+            <summary>
+            To arbitrarily rotate and flip icons, use the fa-rotate-* and fa-flip-* classes. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.Rotate270">
+            <summary>
+            To arbitrarily rotate and flip icons, use the fa-rotate-* and fa-flip-* classes. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.FlipHorizontal">
+            <summary>
+            To arbitrarily rotate and flip icons, use the fa-rotate-* and fa-flip-* classes. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.FlipVertical">
+            <summary>
+            To arbitrarily rotate and flip icons, use the fa-rotate-* and fa-flip-* classes. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.Stack">
+            <summary>
+            To stack multiple icons, use the fa-stack class on the parent, the fa-stack-1x 
+            for the regularly sized icon, and fa-stack-2x for the larger icon. fa-inverse 
+            can be used as an alternative icon color. You can even throw larger icon classes 
+            on the parent to get further control of sizing. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.Stack1x">
+            <summary>
+            To stack multiple icons, use the fa-stack class on the parent, the fa-stack-1x 
+            for the regularly sized icon, and fa-stack-2x for the larger icon. fa-inverse 
+            can be used as an alternative icon color. You can even throw larger icon classes 
+            on the parent to get further control of sizing. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.Stack2x">
+            <summary>
+            To stack multiple icons, use the fa-stack class on the parent, the fa-stack-1x 
+            for the regularly sized icon, and fa-stack-2x for the larger icon. fa-inverse 
+            can be used as an alternative icon color. You can even throw larger icon classes 
+            on the parent to get further control of sizing. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeStyles.Inverse">
+            <summary>
+            To stack multiple icons, use the fa-stack class on the parent, the fa-stack-1x 
+            for the regularly sized icon, and fa-stack-2x for the larger icon. fa-inverse 
+            can be used as an alternative icon color. You can even throw larger icon classes 
+            on the parent to get further control of sizing. 
+            </summary>
+        </member>
+        <member name="T:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet">
+            <summary>
+            Includes the known icons in the Font Awesome set for version 4.0.3
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet._allItems">
+            <summary>
+            Private instance of the AllItems dictionary.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet._lock">
+            <summary>
+            Provides a locking object for initializing the predefined icon array.
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet._Init">
+            <summary>
+            Initializes the array of predefined icons.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Glass">
+            <summary>
+            Class = fa-glass, Unicode = 0xf000
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Music">
+            <summary>
+            Class = fa-music, Unicode = 0xf001
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Search">
+            <summary>
+            Class = fa-search, Unicode = 0xf002
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.EnvelopeO">
+            <summary>
+            Class = fa-envelope-o, Unicode = 0xf003
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Heart">
+            <summary>
+            Class = fa-heart, Unicode = 0xf004
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Star">
+            <summary>
+            Class = fa-star, Unicode = 0xf005
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.StarO">
+            <summary>
+            Class = fa-star-o, Unicode = 0xf006
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.User">
+            <summary>
+            Class = fa-user, Unicode = 0xf007
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Film">
+            <summary>
+            Class = fa-film, Unicode = 0xf008
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ThLarge">
+            <summary>
+            Class = fa-th-large, Unicode = 0xf009
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Th">
+            <summary>
+            Class = fa-th, Unicode = 0xf00a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ThList">
+            <summary>
+            Class = fa-th-list, Unicode = 0xf00b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Check">
+            <summary>
+            Class = fa-check, Unicode = 0xf00c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Times">
+            <summary>
+            Class = fa-times, Unicode = 0xf00d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.SearchPlus">
+            <summary>
+            Class = fa-search-plus, Unicode = 0xf00e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.SearchMinus">
+            <summary>
+            Class = fa-search-minus, Unicode = 0xf010
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.PowerOff">
+            <summary>
+            Class = fa-power-off, Unicode = 0xf011
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Signal">
+            <summary>
+            Class = fa-signal, Unicode = 0xf012
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Cog">
+            <summary>
+            Class = fa-cog, Unicode = 0xf013
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.TrashO">
+            <summary>
+            Class = fa-trash-o, Unicode = 0xf014
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Home">
+            <summary>
+            Class = fa-home, Unicode = 0xf015
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.FileO">
+            <summary>
+            Class = fa-file-o, Unicode = 0xf016
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ClockO">
+            <summary>
+            Class = fa-clock-o, Unicode = 0xf017
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Road">
+            <summary>
+            Class = fa-road, Unicode = 0xf018
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Download">
+            <summary>
+            Class = fa-download, Unicode = 0xf019
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ArrowCircleODown">
+            <summary>
+            Class = fa-arrow-circle-o-down, Unicode = 0xf01a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ArrowCircleOUp">
+            <summary>
+            Class = fa-arrow-circle-o-up, Unicode = 0xf01b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Inbox">
+            <summary>
+            Class = fa-inbox, Unicode = 0xf01c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.PlayCircleO">
+            <summary>
+            Class = fa-play-circle-o, Unicode = 0xf01d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Repeat">
+            <summary>
+            Class = fa-repeat, Unicode = 0xf01e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Refresh">
+            <summary>
+            Class = fa-refresh, Unicode = 0xf021
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ListAlt">
+            <summary>
+            Class = fa-list-alt, Unicode = 0xf022
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Lock">
+            <summary>
+            Class = fa-lock, Unicode = 0xf023
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Flag">
+            <summary>
+            Class = fa-flag, Unicode = 0xf024
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Headphones">
+            <summary>
+            Class = fa-headphones, Unicode = 0xf025
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.VolumeOff">
+            <summary>
+            Class = fa-volume-off, Unicode = 0xf026
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.VolumeDown">
+            <summary>
+            Class = fa-volume-down, Unicode = 0xf027
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.VolumeUp">
+            <summary>
+            Class = fa-volume-up, Unicode = 0xf028
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Qrcode">
+            <summary>
+            Class = fa-qrcode, Unicode = 0xf029
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Barcode">
+            <summary>
+            Class = fa-barcode, Unicode = 0xf02a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Tag">
+            <summary>
+            Class = fa-tag, Unicode = 0xf02b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Tags">
+            <summary>
+            Class = fa-tags, Unicode = 0xf02c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Book">
+            <summary>
+            Class = fa-book, Unicode = 0xf02d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Bookmark">
+            <summary>
+            Class = fa-bookmark, Unicode = 0xf02e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Print">
+            <summary>
+            Class = fa-print, Unicode = 0xf02f
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Camera">
+            <summary>
+            Class = fa-camera, Unicode = 0xf030
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Font">
+            <summary>
+            Class = fa-font, Unicode = 0xf031
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Bold">
+            <summary>
+            Class = fa-bold, Unicode = 0xf032
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Italic">
+            <summary>
+            Class = fa-italic, Unicode = 0xf033
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.TextHeight">
+            <summary>
+            Class = fa-text-height, Unicode = 0xf034
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.TextWidth">
+            <summary>
+            Class = fa-text-width, Unicode = 0xf035
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.AlignLeft">
+            <summary>
+            Class = fa-align-left, Unicode = 0xf036
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.AlignCenter">
+            <summary>
+            Class = fa-align-center, Unicode = 0xf037
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.AlignRight">
+            <summary>
+            Class = fa-align-right, Unicode = 0xf038
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.AlignJustify">
+            <summary>
+            Class = fa-align-justify, Unicode = 0xf039
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.List">
+            <summary>
+            Class = fa-list, Unicode = 0xf03a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Outdent">
+            <summary>
+            Class = fa-outdent, Unicode = 0xf03b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Indent">
+            <summary>
+            Class = fa-indent, Unicode = 0xf03c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.VideoCamera">
+            <summary>
+            Class = fa-video-camera, Unicode = 0xf03d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.PictureO">
+            <summary>
+            Class = fa-picture-o, Unicode = 0xf03e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Pencil">
+            <summary>
+            Class = fa-pencil, Unicode = 0xf040
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.MapMarker">
+            <summary>
+            Class = fa-map-marker, Unicode = 0xf041
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Adjust">
+            <summary>
+            Class = fa-adjust, Unicode = 0xf042
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Tint">
+            <summary>
+            Class = fa-tint, Unicode = 0xf043
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.PencilSquareO">
+            <summary>
+            Class = fa-pencil-square-o, Unicode = 0xf044
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ShareSquareO">
+            <summary>
+            Class = fa-share-square-o, Unicode = 0xf045
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CheckSquareO">
+            <summary>
+            Class = fa-check-square-o, Unicode = 0xf046
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Arrows">
+            <summary>
+            Class = fa-arrows, Unicode = 0xf047
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.StepBackward">
+            <summary>
+            Class = fa-step-backward, Unicode = 0xf048
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.FastBackward">
+            <summary>
+            Class = fa-fast-backward, Unicode = 0xf049
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Backward">
+            <summary>
+            Class = fa-backward, Unicode = 0xf04a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Play">
+            <summary>
+            Class = fa-play, Unicode = 0xf04b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Pause">
+            <summary>
+            Class = fa-pause, Unicode = 0xf04c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Stop">
+            <summary>
+            Class = fa-stop, Unicode = 0xf04d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Forward">
+            <summary>
+            Class = fa-forward, Unicode = 0xf04e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.FastForward">
+            <summary>
+            Class = fa-fast-forward, Unicode = 0xf050
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.StepForward">
+            <summary>
+            Class = fa-step-forward, Unicode = 0xf051
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Eject">
+            <summary>
+            Class = fa-eject, Unicode = 0xf052
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ChevronLeft">
+            <summary>
+            Class = fa-chevron-left, Unicode = 0xf053
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ChevronRight">
+            <summary>
+            Class = fa-chevron-right, Unicode = 0xf054
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.PlusCircle">
+            <summary>
+            Class = fa-plus-circle, Unicode = 0xf055
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.MinusCircle">
+            <summary>
+            Class = fa-minus-circle, Unicode = 0xf056
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.TimesCircle">
+            <summary>
+            Class = fa-times-circle, Unicode = 0xf057
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CheckCircle">
+            <summary>
+            Class = fa-check-circle, Unicode = 0xf058
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.QuestionCircle">
+            <summary>
+            Class = fa-question-circle, Unicode = 0xf059
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.InfoCircle">
+            <summary>
+            Class = fa-info-circle, Unicode = 0xf05a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Crosshairs">
+            <summary>
+            Class = fa-crosshairs, Unicode = 0xf05b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.TimesCircleO">
+            <summary>
+            Class = fa-times-circle-o, Unicode = 0xf05c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CheckCircleO">
+            <summary>
+            Class = fa-check-circle-o, Unicode = 0xf05d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Ban">
+            <summary>
+            Class = fa-ban, Unicode = 0xf05e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ArrowLeft">
+            <summary>
+            Class = fa-arrow-left, Unicode = 0xf060
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ArrowRight">
+            <summary>
+            Class = fa-arrow-right, Unicode = 0xf061
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ArrowUp">
+            <summary>
+            Class = fa-arrow-up, Unicode = 0xf062
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ArrowDown">
+            <summary>
+            Class = fa-arrow-down, Unicode = 0xf063
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Share">
+            <summary>
+            Class = fa-share, Unicode = 0xf064
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Expand">
+            <summary>
+            Class = fa-expand, Unicode = 0xf065
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Compress">
+            <summary>
+            Class = fa-compress, Unicode = 0xf066
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Plus">
+            <summary>
+            Class = fa-plus, Unicode = 0xf067
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Minus">
+            <summary>
+            Class = fa-minus, Unicode = 0xf068
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Asterisk">
+            <summary>
+            Class = fa-asterisk, Unicode = 0xf069
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ExclamationCircle">
+            <summary>
+            Class = fa-exclamation-circle, Unicode = 0xf06a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Gift">
+            <summary>
+            Class = fa-gift, Unicode = 0xf06b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Leaf">
+            <summary>
+            Class = fa-leaf, Unicode = 0xf06c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Fire">
+            <summary>
+            Class = fa-fire, Unicode = 0xf06d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Eye">
+            <summary>
+            Class = fa-eye, Unicode = 0xf06e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.EyeSlash">
+            <summary>
+            Class = fa-eye-slash, Unicode = 0xf070
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ExclamationTriangle">
+            <summary>
+            Class = fa-exclamation-triangle, Unicode = 0xf071
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Plane">
+            <summary>
+            Class = fa-plane, Unicode = 0xf072
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Calendar">
+            <summary>
+            Class = fa-calendar, Unicode = 0xf073
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Random">
+            <summary>
+            Class = fa-random, Unicode = 0xf074
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Comment">
+            <summary>
+            Class = fa-comment, Unicode = 0xf075
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Magnet">
+            <summary>
+            Class = fa-magnet, Unicode = 0xf076
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ChevronUp">
+            <summary>
+            Class = fa-chevron-up, Unicode = 0xf077
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ChevronDown">
+            <summary>
+            Class = fa-chevron-down, Unicode = 0xf078
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Retweet">
+            <summary>
+            Class = fa-retweet, Unicode = 0xf079
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ShoppingCart">
+            <summary>
+            Class = fa-shopping-cart, Unicode = 0xf07a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Folder">
+            <summary>
+            Class = fa-folder, Unicode = 0xf07b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.FolderOpen">
+            <summary>
+            Class = fa-folder-open, Unicode = 0xf07c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ArrowsV">
+            <summary>
+            Class = fa-arrows-v, Unicode = 0xf07d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ArrowsH">
+            <summary>
+            Class = fa-arrows-h, Unicode = 0xf07e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.BarChartO">
+            <summary>
+            Class = fa-bar-chart-o, Unicode = 0xf080
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.TwitterSquare">
+            <summary>
+            Class = fa-twitter-square, Unicode = 0xf081
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.FacebookSquare">
+            <summary>
+            Class = fa-facebook-square, Unicode = 0xf082
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CameraRetro">
+            <summary>
+            Class = fa-camera-retro, Unicode = 0xf083
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Key">
+            <summary>
+            Class = fa-key, Unicode = 0xf084
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Cogs">
+            <summary>
+            Class = fa-cogs, Unicode = 0xf085
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Comments">
+            <summary>
+            Class = fa-comments, Unicode = 0xf086
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ThumbsOUp">
+            <summary>
+            Class = fa-thumbs-o-up, Unicode = 0xf087
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ThumbsODown">
+            <summary>
+            Class = fa-thumbs-o-down, Unicode = 0xf088
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.StarHalf">
+            <summary>
+            Class = fa-star-half, Unicode = 0xf089
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.HeartO">
+            <summary>
+            Class = fa-heart-o, Unicode = 0xf08a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.SignOut">
+            <summary>
+            Class = fa-sign-out, Unicode = 0xf08b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.LinkedinSquare">
+            <summary>
+            Class = fa-linkedin-square, Unicode = 0xf08c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ThumbTack">
+            <summary>
+            Class = fa-thumb-tack, Unicode = 0xf08d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ExternalLink">
+            <summary>
+            Class = fa-external-link, Unicode = 0xf08e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.SignIn">
+            <summary>
+            Class = fa-sign-in, Unicode = 0xf090
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Trophy">
+            <summary>
+            Class = fa-trophy, Unicode = 0xf091
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.GithubSquare">
+            <summary>
+            Class = fa-github-square, Unicode = 0xf092
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Upload">
+            <summary>
+            Class = fa-upload, Unicode = 0xf093
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.LemonO">
+            <summary>
+            Class = fa-lemon-o, Unicode = 0xf094
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Phone">
+            <summary>
+            Class = fa-phone, Unicode = 0xf095
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.SquareO">
+            <summary>
+            Class = fa-square-o, Unicode = 0xf096
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.BookmarkO">
+            <summary>
+            Class = fa-bookmark-o, Unicode = 0xf097
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.PhoneSquare">
+            <summary>
+            Class = fa-phone-square, Unicode = 0xf098
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Twitter">
+            <summary>
+            Class = fa-twitter, Unicode = 0xf099
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Facebook">
+            <summary>
+            Class = fa-facebook, Unicode = 0xf09a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Github">
+            <summary>
+            Class = fa-github, Unicode = 0xf09b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Unlock">
+            <summary>
+            Class = fa-unlock, Unicode = 0xf09c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CreditCard">
+            <summary>
+            Class = fa-credit-card, Unicode = 0xf09d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Rss">
+            <summary>
+            Class = fa-rss, Unicode = 0xf09e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.HddO">
+            <summary>
+            Class = fa-hdd-o, Unicode = 0xf0a0
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Bullhorn">
+            <summary>
+            Class = fa-bullhorn, Unicode = 0xf0a1
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Bell">
+            <summary>
+            Class = fa-bell, Unicode = 0xf0f3
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Certificate">
+            <summary>
+            Class = fa-certificate, Unicode = 0xf0a3
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.HandORight">
+            <summary>
+            Class = fa-hand-o-right, Unicode = 0xf0a4
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.HandOLeft">
+            <summary>
+            Class = fa-hand-o-left, Unicode = 0xf0a5
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.HandOUp">
+            <summary>
+            Class = fa-hand-o-up, Unicode = 0xf0a6
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.HandODown">
+            <summary>
+            Class = fa-hand-o-down, Unicode = 0xf0a7
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ArrowCircleLeft">
+            <summary>
+            Class = fa-arrow-circle-left, Unicode = 0xf0a8
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ArrowCircleRight">
+            <summary>
+            Class = fa-arrow-circle-right, Unicode = 0xf0a9
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ArrowCircleUp">
+            <summary>
+            Class = fa-arrow-circle-up, Unicode = 0xf0aa
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ArrowCircleDown">
+            <summary>
+            Class = fa-arrow-circle-down, Unicode = 0xf0ab
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Globe">
+            <summary>
+            Class = fa-globe, Unicode = 0xf0ac
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Wrench">
+            <summary>
+            Class = fa-wrench, Unicode = 0xf0ad
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Tasks">
+            <summary>
+            Class = fa-tasks, Unicode = 0xf0ae
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Filter">
+            <summary>
+            Class = fa-filter, Unicode = 0xf0b0
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Briefcase">
+            <summary>
+            Class = fa-briefcase, Unicode = 0xf0b1
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ArrowsAlt">
+            <summary>
+            Class = fa-arrows-alt, Unicode = 0xf0b2
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Users">
+            <summary>
+            Class = fa-users, Unicode = 0xf0c0
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Link">
+            <summary>
+            Class = fa-link, Unicode = 0xf0c1
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Cloud">
+            <summary>
+            Class = fa-cloud, Unicode = 0xf0c2
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Flask">
+            <summary>
+            Class = fa-flask, Unicode = 0xf0c3
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Scissors">
+            <summary>
+            Class = fa-scissors, Unicode = 0xf0c4
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.FilesO">
+            <summary>
+            Class = fa-files-o, Unicode = 0xf0c5
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Paperclip">
+            <summary>
+            Class = fa-paperclip, Unicode = 0xf0c6
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.FloppyO">
+            <summary>
+            Class = fa-floppy-o, Unicode = 0xf0c7
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Square">
+            <summary>
+            Class = fa-square, Unicode = 0xf0c8
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Bars">
+            <summary>
+            Class = fa-bars, Unicode = 0xf0c9
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ListUl">
+            <summary>
+            Class = fa-list-ul, Unicode = 0xf0ca
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ListOl">
+            <summary>
+            Class = fa-list-ol, Unicode = 0xf0cb
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Strikethrough">
+            <summary>
+            Class = fa-strikethrough, Unicode = 0xf0cc
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Underline">
+            <summary>
+            Class = fa-underline, Unicode = 0xf0cd
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Table">
+            <summary>
+            Class = fa-table, Unicode = 0xf0ce
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Magic">
+            <summary>
+            Class = fa-magic, Unicode = 0xf0d0
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Truck">
+            <summary>
+            Class = fa-truck, Unicode = 0xf0d1
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Pinterest">
+            <summary>
+            Class = fa-pinterest, Unicode = 0xf0d2
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.PinterestSquare">
+            <summary>
+            Class = fa-pinterest-square, Unicode = 0xf0d3
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.GooglePlusSquare">
+            <summary>
+            Class = fa-google-plus-square, Unicode = 0xf0d4
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.GooglePlus">
+            <summary>
+            Class = fa-google-plus, Unicode = 0xf0d5
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Money">
+            <summary>
+            Class = fa-money, Unicode = 0xf0d6
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CaretDown">
+            <summary>
+            Class = fa-caret-down, Unicode = 0xf0d7
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CaretUp">
+            <summary>
+            Class = fa-caret-up, Unicode = 0xf0d8
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CaretLeft">
+            <summary>
+            Class = fa-caret-left, Unicode = 0xf0d9
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CaretRight">
+            <summary>
+            Class = fa-caret-right, Unicode = 0xf0da
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Columns">
+            <summary>
+            Class = fa-columns, Unicode = 0xf0db
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Sort">
+            <summary>
+            Class = fa-sort, Unicode = 0xf0dc
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.SortAsc">
+            <summary>
+            Class = fa-sort-asc, Unicode = 0xf0dd
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.SortDesc">
+            <summary>
+            Class = fa-sort-desc, Unicode = 0xf0de
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Envelope">
+            <summary>
+            Class = fa-envelope, Unicode = 0xf0e0
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Linkedin">
+            <summary>
+            Class = fa-linkedin, Unicode = 0xf0e1
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Undo">
+            <summary>
+            Class = fa-undo, Unicode = 0xf0e2
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Gavel">
+            <summary>
+            Class = fa-gavel, Unicode = 0xf0e3
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Tachometer">
+            <summary>
+            Class = fa-tachometer, Unicode = 0xf0e4
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CommentO">
+            <summary>
+            Class = fa-comment-o, Unicode = 0xf0e5
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CommentsO">
+            <summary>
+            Class = fa-comments-o, Unicode = 0xf0e6
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Bolt">
+            <summary>
+            Class = fa-bolt, Unicode = 0xf0e7
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Sitemap">
+            <summary>
+            Class = fa-sitemap, Unicode = 0xf0e8
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Umbrella">
+            <summary>
+            Class = fa-umbrella, Unicode = 0xf0e9
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Clipboard">
+            <summary>
+            Class = fa-clipboard, Unicode = 0xf0ea
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.LightbulbO">
+            <summary>
+            Class = fa-lightbulb-o, Unicode = 0xf0eb
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Exchange">
+            <summary>
+            Class = fa-exchange, Unicode = 0xf0ec
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CloudDownload">
+            <summary>
+            Class = fa-cloud-download, Unicode = 0xf0ed
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CloudUpload">
+            <summary>
+            Class = fa-cloud-upload, Unicode = 0xf0ee
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.UserMd">
+            <summary>
+            Class = fa-user-md, Unicode = 0xf0f0
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Stethoscope">
+            <summary>
+            Class = fa-stethoscope, Unicode = 0xf0f1
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Suitcase">
+            <summary>
+            Class = fa-suitcase, Unicode = 0xf0f2
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.BellO">
+            <summary>
+            Class = fa-bell-o, Unicode = 0xf0a2
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Coffee">
+            <summary>
+            Class = fa-coffee, Unicode = 0xf0f4
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Cutlery">
+            <summary>
+            Class = fa-cutlery, Unicode = 0xf0f5
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.FileTextO">
+            <summary>
+            Class = fa-file-text-o, Unicode = 0xf0f6
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.BuildingO">
+            <summary>
+            Class = fa-building-o, Unicode = 0xf0f7
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.HospitalO">
+            <summary>
+            Class = fa-hospital-o, Unicode = 0xf0f8
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Ambulance">
+            <summary>
+            Class = fa-ambulance, Unicode = 0xf0f9
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Medkit">
+            <summary>
+            Class = fa-medkit, Unicode = 0xf0fa
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.FighterJet">
+            <summary>
+            Class = fa-fighter-jet, Unicode = 0xf0fb
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Beer">
+            <summary>
+            Class = fa-beer, Unicode = 0xf0fc
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.HSquare">
+            <summary>
+            Class = fa-h-square, Unicode = 0xf0fd
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.PlusSquare">
+            <summary>
+            Class = fa-plus-square, Unicode = 0xf0fe
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.AngleDoubleLeft">
+            <summary>
+            Class = fa-angle-double-left, Unicode = 0xf100
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.AngleDoubleRight">
+            <summary>
+            Class = fa-angle-double-right, Unicode = 0xf101
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.AngleDoubleUp">
+            <summary>
+            Class = fa-angle-double-up, Unicode = 0xf102
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.AngleDoubleDown">
+            <summary>
+            Class = fa-angle-double-down, Unicode = 0xf103
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.AngleLeft">
+            <summary>
+            Class = fa-angle-left, Unicode = 0xf104
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.AngleRight">
+            <summary>
+            Class = fa-angle-right, Unicode = 0xf105
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.AngleUp">
+            <summary>
+            Class = fa-angle-up, Unicode = 0xf106
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.AngleDown">
+            <summary>
+            Class = fa-angle-down, Unicode = 0xf107
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Desktop">
+            <summary>
+            Class = fa-desktop, Unicode = 0xf108
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Laptop">
+            <summary>
+            Class = fa-laptop, Unicode = 0xf109
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Tablet">
+            <summary>
+            Class = fa-tablet, Unicode = 0xf10a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Mobile">
+            <summary>
+            Class = fa-mobile, Unicode = 0xf10b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CircleO">
+            <summary>
+            Class = fa-circle-o, Unicode = 0xf10c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.QuoteLeft">
+            <summary>
+            Class = fa-quote-left, Unicode = 0xf10d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.QuoteRight">
+            <summary>
+            Class = fa-quote-right, Unicode = 0xf10e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Spinner">
+            <summary>
+            Class = fa-spinner, Unicode = 0xf110
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Circle">
+            <summary>
+            Class = fa-circle, Unicode = 0xf111
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Reply">
+            <summary>
+            Class = fa-reply, Unicode = 0xf112
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.GithubAlt">
+            <summary>
+            Class = fa-github-alt, Unicode = 0xf113
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.FolderO">
+            <summary>
+            Class = fa-folder-o, Unicode = 0xf114
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.FolderOpenO">
+            <summary>
+            Class = fa-folder-open-o, Unicode = 0xf115
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.SmileO">
+            <summary>
+            Class = fa-smile-o, Unicode = 0xf118
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.FrownO">
+            <summary>
+            Class = fa-frown-o, Unicode = 0xf119
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.MehO">
+            <summary>
+            Class = fa-meh-o, Unicode = 0xf11a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Gamepad">
+            <summary>
+            Class = fa-gamepad, Unicode = 0xf11b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.KeyboardO">
+            <summary>
+            Class = fa-keyboard-o, Unicode = 0xf11c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.FlagO">
+            <summary>
+            Class = fa-flag-o, Unicode = 0xf11d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.FlagCheckered">
+            <summary>
+            Class = fa-flag-checkered, Unicode = 0xf11e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Terminal">
+            <summary>
+            Class = fa-terminal, Unicode = 0xf120
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Code">
+            <summary>
+            Class = fa-code, Unicode = 0xf121
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ReplyAll">
+            <summary>
+            Class = fa-reply-all, Unicode = 0xf122
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.MailReplyAll">
+            <summary>
+            Class = fa-mail-reply-all, Unicode = 0xf122
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.StarHalfO">
+            <summary>
+            Class = fa-star-half-o, Unicode = 0xf123
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.LocationArrow">
+            <summary>
+            Class = fa-location-arrow, Unicode = 0xf124
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Crop">
+            <summary>
+            Class = fa-crop, Unicode = 0xf125
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CodeFork">
+            <summary>
+            Class = fa-code-fork, Unicode = 0xf126
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ChainBroken">
+            <summary>
+            Class = fa-chain-broken, Unicode = 0xf127
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Question">
+            <summary>
+            Class = fa-question, Unicode = 0xf128
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Info">
+            <summary>
+            Class = fa-info, Unicode = 0xf129
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Exclamation">
+            <summary>
+            Class = fa-exclamation, Unicode = 0xf12a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Superscript">
+            <summary>
+            Class = fa-superscript, Unicode = 0xf12b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Subscript">
+            <summary>
+            Class = fa-subscript, Unicode = 0xf12c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Eraser">
+            <summary>
+            Class = fa-eraser, Unicode = 0xf12d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.PuzzlePiece">
+            <summary>
+            Class = fa-puzzle-piece, Unicode = 0xf12e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Microphone">
+            <summary>
+            Class = fa-microphone, Unicode = 0xf130
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.MicrophoneSlash">
+            <summary>
+            Class = fa-microphone-slash, Unicode = 0xf131
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Shield">
+            <summary>
+            Class = fa-shield, Unicode = 0xf132
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CalendarO">
+            <summary>
+            Class = fa-calendar-o, Unicode = 0xf133
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.FireExtinguisher">
+            <summary>
+            Class = fa-fire-extinguisher, Unicode = 0xf134
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Rocket">
+            <summary>
+            Class = fa-rocket, Unicode = 0xf135
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Maxcdn">
+            <summary>
+            Class = fa-maxcdn, Unicode = 0xf136
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ChevronCircleLeft">
+            <summary>
+            Class = fa-chevron-circle-left, Unicode = 0xf137
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ChevronCircleRight">
+            <summary>
+            Class = fa-chevron-circle-right, Unicode = 0xf138
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ChevronCircleUp">
+            <summary>
+            Class = fa-chevron-circle-up, Unicode = 0xf139
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ChevronCircleDown">
+            <summary>
+            Class = fa-chevron-circle-down, Unicode = 0xf13a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Html5">
+            <summary>
+            Class = fa-html5, Unicode = 0xf13b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Css3">
+            <summary>
+            Class = fa-css3, Unicode = 0xf13c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Anchor">
+            <summary>
+            Class = fa-anchor, Unicode = 0xf13d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.UnlockAlt">
+            <summary>
+            Class = fa-unlock-alt, Unicode = 0xf13e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Bullseye">
+            <summary>
+            Class = fa-bullseye, Unicode = 0xf140
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.EllipsisH">
+            <summary>
+            Class = fa-ellipsis-h, Unicode = 0xf141
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.EllipsisV">
+            <summary>
+            Class = fa-ellipsis-v, Unicode = 0xf142
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.RssSquare">
+            <summary>
+            Class = fa-rss-square, Unicode = 0xf143
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.PlayCircle">
+            <summary>
+            Class = fa-play-circle, Unicode = 0xf144
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Ticket">
+            <summary>
+            Class = fa-ticket, Unicode = 0xf145
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.MinusSquare">
+            <summary>
+            Class = fa-minus-square, Unicode = 0xf146
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.MinusSquareO">
+            <summary>
+            Class = fa-minus-square-o, Unicode = 0xf147
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.LevelUp">
+            <summary>
+            Class = fa-level-up, Unicode = 0xf148
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.LevelDown">
+            <summary>
+            Class = fa-level-down, Unicode = 0xf149
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CheckSquare">
+            <summary>
+            Class = fa-check-square, Unicode = 0xf14a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.PencilSquare">
+            <summary>
+            Class = fa-pencil-square, Unicode = 0xf14b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ExternalLinkSquare">
+            <summary>
+            Class = fa-external-link-square, Unicode = 0xf14c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ShareSquare">
+            <summary>
+            Class = fa-share-square, Unicode = 0xf14d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Compass">
+            <summary>
+            Class = fa-compass, Unicode = 0xf14e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CaretSquareODown">
+            <summary>
+            Class = fa-caret-square-o-down, Unicode = 0xf150
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CaretSquareOUp">
+            <summary>
+            Class = fa-caret-square-o-up, Unicode = 0xf151
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CaretSquareORight">
+            <summary>
+            Class = fa-caret-square-o-right, Unicode = 0xf152
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Eur">
+            <summary>
+            Class = fa-eur, Unicode = 0xf153
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Gbp">
+            <summary>
+            Class = fa-gbp, Unicode = 0xf154
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Usd">
+            <summary>
+            Class = fa-usd, Unicode = 0xf155
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Inr">
+            <summary>
+            Class = fa-inr, Unicode = 0xf156
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Jpy">
+            <summary>
+            Class = fa-jpy, Unicode = 0xf157
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Rub">
+            <summary>
+            Class = fa-rub, Unicode = 0xf158
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Krw">
+            <summary>
+            Class = fa-krw, Unicode = 0xf159
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Btc">
+            <summary>
+            Class = fa-btc, Unicode = 0xf15a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.File">
+            <summary>
+            Class = fa-file, Unicode = 0xf15b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.FileText">
+            <summary>
+            Class = fa-file-text, Unicode = 0xf15c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.SortAlphaAsc">
+            <summary>
+            Class = fa-sort-alpha-asc, Unicode = 0xf15d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.SortAlphaDesc">
+            <summary>
+            Class = fa-sort-alpha-desc, Unicode = 0xf15e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.SortAmountAsc">
+            <summary>
+            Class = fa-sort-amount-asc, Unicode = 0xf160
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.SortAmountDesc">
+            <summary>
+            Class = fa-sort-amount-desc, Unicode = 0xf161
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.SortNumericAsc">
+            <summary>
+            Class = fa-sort-numeric-asc, Unicode = 0xf162
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.SortNumericDesc">
+            <summary>
+            Class = fa-sort-numeric-desc, Unicode = 0xf163
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ThumbsUp">
+            <summary>
+            Class = fa-thumbs-up, Unicode = 0xf164
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ThumbsDown">
+            <summary>
+            Class = fa-thumbs-down, Unicode = 0xf165
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.YoutubeSquare">
+            <summary>
+            Class = fa-youtube-square, Unicode = 0xf166
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Youtube">
+            <summary>
+            Class = fa-youtube, Unicode = 0xf167
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Xing">
+            <summary>
+            Class = fa-xing, Unicode = 0xf168
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.XingSquare">
+            <summary>
+            Class = fa-xing-square, Unicode = 0xf169
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.YoutubePlay">
+            <summary>
+            Class = fa-youtube-play, Unicode = 0xf16a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Dropbox">
+            <summary>
+            Class = fa-dropbox, Unicode = 0xf16b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.StackOverflow">
+            <summary>
+            Class = fa-stack-overflow, Unicode = 0xf16c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Instagram">
+            <summary>
+            Class = fa-instagram, Unicode = 0xf16d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Flickr">
+            <summary>
+            Class = fa-flickr, Unicode = 0xf16e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Adn">
+            <summary>
+            Class = fa-adn, Unicode = 0xf170
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Bitbucket">
+            <summary>
+            Class = fa-bitbucket, Unicode = 0xf171
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.BitbucketSquare">
+            <summary>
+            Class = fa-bitbucket-square, Unicode = 0xf172
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Tumblr">
+            <summary>
+            Class = fa-tumblr, Unicode = 0xf173
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.TumblrSquare">
+            <summary>
+            Class = fa-tumblr-square, Unicode = 0xf174
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.LongArrowDown">
+            <summary>
+            Class = fa-long-arrow-down, Unicode = 0xf175
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.LongArrowUp">
+            <summary>
+            Class = fa-long-arrow-up, Unicode = 0xf176
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.LongArrowLeft">
+            <summary>
+            Class = fa-long-arrow-left, Unicode = 0xf177
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.LongArrowRight">
+            <summary>
+            Class = fa-long-arrow-right, Unicode = 0xf178
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Apple">
+            <summary>
+            Class = fa-apple, Unicode = 0xf179
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Windows">
+            <summary>
+            Class = fa-windows, Unicode = 0xf17a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Android">
+            <summary>
+            Class = fa-android, Unicode = 0xf17b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Linux">
+            <summary>
+            Class = fa-linux, Unicode = 0xf17c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Dribbble">
+            <summary>
+            Class = fa-dribbble, Unicode = 0xf17d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Skype">
+            <summary>
+            Class = fa-skype, Unicode = 0xf17e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Foursquare">
+            <summary>
+            Class = fa-foursquare, Unicode = 0xf180
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Trello">
+            <summary>
+            Class = fa-trello, Unicode = 0xf181
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Female">
+            <summary>
+            Class = fa-female, Unicode = 0xf182
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Male">
+            <summary>
+            Class = fa-male, Unicode = 0xf183
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Gittip">
+            <summary>
+            Class = fa-gittip, Unicode = 0xf184
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.SunO">
+            <summary>
+            Class = fa-sun-o, Unicode = 0xf185
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.MoonO">
+            <summary>
+            Class = fa-moon-o, Unicode = 0xf186
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Archive">
+            <summary>
+            Class = fa-archive, Unicode = 0xf187
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Bug">
+            <summary>
+            Class = fa-bug, Unicode = 0xf188
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Vk">
+            <summary>
+            Class = fa-vk, Unicode = 0xf189
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Weibo">
+            <summary>
+            Class = fa-weibo, Unicode = 0xf18a
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Renren">
+            <summary>
+            Class = fa-renren, Unicode = 0xf18b
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Pagelines">
+            <summary>
+            Class = fa-pagelines, Unicode = 0xf18c
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.StackExchange">
+            <summary>
+            Class = fa-stack-exchange, Unicode = 0xf18d
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ArrowCircleORight">
+            <summary>
+            Class = fa-arrow-circle-o-right, Unicode = 0xf18e
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.ArrowCircleOLeft">
+            <summary>
+            Class = fa-arrow-circle-o-left, Unicode = 0xf190
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.CaretSquareOLeft">
+            <summary>
+            Class = fa-caret-square-o-left, Unicode = 0xf191
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.DotCircleO">
+            <summary>
+            Class = fa-dot-circle-o, Unicode = 0xf192
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Wheelchair">
+            <summary>
+            Class = fa-wheelchair, Unicode = 0xf193
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.VimeoSquare">
+            <summary>
+            Class = fa-vimeo-square, Unicode = 0xf194
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Try">
+            <summary>
+            Class = fa-try, Unicode = 0xf195
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.PlusSquareO">
+            <summary>
+            Class = fa-plus-square-o, Unicode = 0xf196
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.AllItems">
+            <summary>
+            Gets a Dictionary of predefined icons by class name. This dictionary
+            allows querying of the icons using LINQ.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.Version">
+            <summary>
+            Gets the version of Font Awesome that this library is based on.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.FontAwesome.FontAwesomeIconSet.IconCount">
+            <summary>
+            Gets the number of icons defined in the current version of Font Awesome.
+            </summary>
+        </member>
+        <member name="T:Mvc.RazorTools.FontAwesome.FontAwesomeException">
+            <summary>
+            Provides a abstract definition for an exception in this library.
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeException.#ctor">
+            <summary>
+            Initializes a new instance of the Mvc.RazorTools.FontAwesome.FontAwesomeException class.
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeException.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the Mvc.RazorTools.FontAwesome.FontAwesomeException 
+            class with the specified error message.
+            </summary>
+            <param name="message">A System.String containing the error message that describes the exception.</param>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeException.#ctor(System.String,System.Object[])">
+            <summary>
+            Initializes a new instance of the Mvc.RazorTools.FontAwesome.FontAwesomeException 
+            class with the specified formatted error message.
+            </summary>
+            <param name="format">A composite format string.</param>
+            <param name="args">An object array that contains zero or more objects to format.</param>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the Mvc.RazorTools.FontAwesome.FontAwesomeException
+            class with a specified error message and a reference to the inner exception 
+            that is the cause of this exception.
+            </summary>
+            <param name="message"></param>
+            <param name="innerException">The exception that is the cause of the current exception, or a null reference
+            (Nothing in Visual Basic) if no inner exception is specified.</param>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+            <summary>
+            When overridden in a derived class, sets the System.Runtime.Serialization.SerializationInfo 
+            with information about the exception.
+            </summary>
+            <param name="info">The System.Runtime.Serialization.SerializationInfo that holds the serialized 
+            object data about the exception being thrown.</param>
+            <param name="context">The System.Runtime.Serialization.StreamingContext that contains contextual 
+            information about the source or destination.</param>
+        </member>
+        <member name="T:Mvc.RazorTools.FontAwesome.FontAwesomeIcon">
+            <summary>
+            Defines the properties necessary to create a Font Awesome tag in an MVC Razor view.
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIcon.#ctor">
+            <summary>
+            Initializes a new empty instance of a Mvc.RazorTools.FontAwesome.FontAwesomeIcon object. Note
+            this empty version will not display any icon until the Id property is set.
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIcon.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of a Mvc.RazorTools.FontAwesome.FontAwesomeIcon object with the
+            specified Id. The Id represents the icon name in the CSS style sheet for Font Awesome.
+            </summary>
+            <param name="iconId">The CSS style sheet name of the icon this instance represents.</param>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIcon.#ctor(System.String,System.Int32)">
+            <summary>
+            Initializes a new instance of a Mvc.RazorTools.FontAwesome.FontAwesomeIcon object with the
+            specified Id and Unicode value. The Unicode value is for display purposes only and it
+            not used by this library.
+            </summary>
+            <param name="iconId">The CSS style sheet name of the icon this instance represents.</param>
+            <param name="unicode">An System.Int32 value representing the Unicode value of the font.</param>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIcon.Create(System.String)">
+            <summary>
+            Initializes and returns a new instance of a Mvc.RazorTools.FontAwesome.FontAwesomeIcon object
+            with the specified Id.
+            </summary>
+            <param name="iconId">The CSS style sheet name of the icon this instance represents.</param>
+            <returns>A newly initialized Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIcon.Create(System.String,System.Int32)">
+            <summary>
+            Initializes and returns a new instance of a Mvc.RazorTools.FontAwesome.FontAwesomeIcon object
+            with the specified Id and Unicode value.
+            </summary>
+            <param name="iconId">The CSS style sheet name of the icon this instance represents.</param>
+            <param name="unicode">A System.Int32 value that represents the Unicode value of the font.</param>
+            <returns>A newly initialized Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIcon.Create(System.String,System.Int32,System.String)">
+            <summary>
+            Initializes and returns a new instance of a Mvc.RazorTools.FontAwesome.FontAwesomeIcon object
+            with the specified Id, Unicode value and name.
+            </summary>
+            <param name="iconId">The CSS style sheet name of the icon this instance represents.</param>
+            <param name="unicode">A System.Int32 value that represents the Unicode value of the font.</param>
+            <param name="name">A System.String that contains the name of this instance.</param>
+            <returns>A newly initialized Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIcon.Create(System.String,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Initializes and returns a new instance of a Mvc.RazorTools.FontAwesome.FontAwesomeIcon object
+            with the specified Id, Unicode value, name and whether or not this instance is locked.
+            </summary>
+            <param name="iconId">The CSS style sheet name of the icon this instance represents.</param>
+            <param name="unicode">A System.Int32 value that represents the Unicode value of the font.</param>
+            <param name="name">A System.String that contains the name of this instance.</param>
+            <param name="locked">A value that indicates if the properties on this instance are locked or not.</param>
+            <returns>A newly initialized Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIcon.Create(System.String,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Initializes and returns a new instance of a Mvc.RazorTools.FontAwesome.FontAwesomeIcon object
+            with the specified Id and custom class attributes.
+            </summary>
+            <param name="iconId">The CSS style sheet name of the icon this instance represents.</param>
+            <param name="classAttributes">A list of custom class attributes for this instance.</param>
+            <returns>A newly initialized Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIcon.Create(System.String,System.Int32,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Initializes and returns a new instance of a Mvc.RazorTools.FontAwesome.FontAwesomeIcon object
+            with the specified Id, Unicode value and custom class attributes.
+            </summary>
+            <param name="iconId">The CSS style sheet name of the icon this instance represents.</param>
+            <param name="unicode">A System.Int32 value that represents the Unicode value of the font.</param>
+            <param name="classAttributes">A list of custom class attributes for this instance.</param>
+            <returns>A newly initialized Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIcon.op_Implicit(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)~System.Web.Mvc.MvcHtmlString">
+            <summary>
+            Converts this instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon
+            to a System.Web.Mvc.MvcHtmlString object containing the HTML markup 
+            for the icon.
+            </summary>
+            <param name="item">The Mvc.RazorTools.FontAwesome.FontAwesomeIcon instance to be converted.</param>
+            <returns>A System.Web.Mvc.MvcHtmlString object containing the HTML markup for this Font Awesome icon.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIcon.op_Implicit(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)~System.String">
+            <summary>
+            Converts this instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon
+            to an System.String object containing the HTML markup for the icon.
+            </summary>
+            <param name="item">The Mvc.RazorTools.FontAwesome.FontAwesomeIcon instance to be converted.</param>
+            <returns>A System.String object containing the HTML markup for this Font Awesome icon.</returns>
+        </member>
+        <member name="P:Mvc.RazorTools.FontAwesome.FontAwesomeIcon.IconId">
+            <summary>
+            Gets/sets the CSS style sheet name of the icon this instance represents. 
+            If the object is a predefined object then this value cannot be changed. 
+            Read-only if this instanced is locked.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.FontAwesome.FontAwesomeIcon.Unicode">
+            <summary>
+            Gets/set an System.Int32 value that represents the Unicode value of the font. Read-only 
+            if this instanced is locked.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.FontAwesome.FontAwesomeIcon.HexCode">
+            <summary>
+            Gets a hexadecimal representation of the Unicode value.
+            </summary>
+        </member>
+        <member name="T:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions">
+            <summary>
+            Provides a set of extension methods for a Mvc.RazorTools.FontAwesome.FontAwesomeIcon
+            object to be used within the Razor view.
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.Customize(Mvc.RazorTools.FontAwesome.FontAwesomeIcon,System.String[])">
+            <summary>
+            Customizes an existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon by adding
+            class attributes and returning the object. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <param name="items">The class attributes to be added to the existing instance.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.Large1x(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.Large1x style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.Large2x(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.Large2x style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.Large3x(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.Large3x style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.Large4x(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.Large4x style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.Large5x(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.Large5x style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.FixedWidth(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.FixedWidth style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.ListItem(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.ListItem style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.Border(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.Border style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.PullRight(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.PullRight style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.PullLeft(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.PullLeft style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.Spin(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.Spin style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.Rotate90(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.Rotate90 style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.Rotate180(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.Rotate180 style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.Rotate270(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.Rotate270 style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.FlipHorizontal(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.FlipHorizontal style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.FlipVertical(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.FlipVertical style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.Inverse(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.Inverse style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.Stack1x(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.Stack1x style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.Stack2x(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Applies the FontAwesomeStyles.Stack2x style to the specified icon. This method can be chained to
+            apply multiple styles.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A new modified instance of the Mvc.RazorTools.FontAwesome.FontAwesomeIcon object.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.Stack(System.Collections.Generic.IEnumerable{Mvc.RazorTools.FontAwesome.FontAwesomeIcon},System.String[])">
+            <summary>
+            Creates a stack from a list of Mvc.RazorTools.FontAwesome.FontAwesomeIcon objects and applies
+            the specified styles.
+            </summary>
+            <param name="items">A list of Mvc.RazorTools.FontAwesome.FontAwesomeIcon objects.</param>
+            <param name="styles">A list of styles to apply to the FontAwesomeStack instance.</param>
+            <returns>A newly created Mvc.RazorTools.FontAwesome.FontAwesomeStack instance.</returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeIconExtensions.CssOnly(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Gets the class attribute value only for the given FontAwesomeIcon instance.
+            </summary>
+            <param name="icon">The existing Mvc.RazorTools.FontAwesome.FontAwesomeIcon to modify.</param>
+            <returns>A System.String value containing the class attribute value from the HTML markup generated for this icon.</returns>
+        </member>
+        <member name="T:Mvc.RazorTools.FontAwesome.FontAwesomeStack">
+            <summary>
+            Font Awesome icons can be displayed over one another to create
+            more affects or more icons. This class provides a mechanism to
+            stack icons using a list.
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStack.#ctor">
+            <summary>
+            Initializes a new instance of the Mvc.RazorTools.FontAwesome.FontAwesomeStack
+            object.
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStack.#ctor(Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Initializes anew instance of the Mvc.RazorTools.FontAwesome.FontAwesomeStack
+            object the specified top icon.
+            </summary>
+            <param name="topItem">The top icon in the stack.</param>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStack.#ctor(Mvc.RazorTools.FontAwesome.FontAwesomeIcon,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Initializes a new instance of the Mvc.RazorTools.FontAwesome.FontAwesomeStack
+            object the specified top icon and custom class attributes.
+            </summary>
+            <param name="topItem">The top icon in the stack.</param>
+            <param name="classAttributes">The custom class attributes applied to the stack HTML tag (not the icons).</param>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStack.#ctor(Mvc.RazorTools.FontAwesome.FontAwesomeIcon,Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Initializes a new instance of the Mvc.RazorTools.FontAwesome.FontAwesomeStack
+            object the specified top and bottom icon
+            </summary>
+            <param name="topItem">The top icon in the stack.</param>
+            <param name="bottomItem">The bottom icon in the stack.</param>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStack.#ctor(Mvc.RazorTools.FontAwesome.FontAwesomeIcon,Mvc.RazorTools.FontAwesome.FontAwesomeIcon,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Initializes a new instance of the Mvc.RazorTools.FontAwesome.FontAwesomeStack
+            object the specified top icon, bottom icon and custom class attributes. 
+            </summary>
+            <param name="topItem">The top icon in the stack.</param>
+            <param name="bottomItem">The bottom icon in the stack.</param>
+            <param name="classAttributes">The custom class attributes applied to the stack HTML tag (not the icons).</param>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStack.#ctor(Mvc.RazorTools.FontAwesome.FontAwesomeIcon,Mvc.RazorTools.FontAwesome.FontAwesomeIcon,Mvc.RazorTools.FontAwesome.FontAwesomeIcon)">
+            <summary>
+            Initializes a new instance of the Mvc.RazorTools.FontAwesome.FontAwesomeStack
+            object the specified top icon, middle icon and bottom icon. 
+            </summary>
+            <param name="topItem">The top icon in the stack.</param>
+            <param name="middleItem">The middle icon in the stack.</param>
+            <param name="bottomItem">The bottom icon in the stack.</param>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStack.#ctor(Mvc.RazorTools.FontAwesome.FontAwesomeIcon,Mvc.RazorTools.FontAwesome.FontAwesomeIcon,Mvc.RazorTools.FontAwesome.FontAwesomeIcon,System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Initializes a new instance of the Mvc.RazorTools.FontAwesome.FontAwesomeStack
+            object the specified top icon, middle icon, bottom icon and custom class attributes. 
+            </summary>
+            <param name="topItem">The top icon in the stack.</param>
+            <param name="middleItem">The middle icon in the stack.</param>
+            <param name="bottomItem">The bottom icon in the stack.</param>
+            <param name="classAttributes">The custom class attributes applied to the stack HTML tag (not the icons).</param>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStack.#ctor(System.Collections.Generic.IEnumerable{Mvc.RazorTools.FontAwesome.FontAwesomeIcon})">
+            <summary>
+            Initializes a new instance of the Mvc.RazorTools.FontAwesome.FontAwesomeStack
+            object the specified list of items. The first icon in the list is displayed
+            on the top.
+            </summary>
+            <param name="items">A list of icons to be stacked.</param>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStack.#ctor(System.Collections.Generic.IEnumerable{Mvc.RazorTools.FontAwesome.FontAwesomeIcon},System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            Initializes a new instance of the Mvc.RazorTools.FontAwesome.FontAwesomeStack
+            object the specified list of items and the specified custom class 
+            attributes. The first icon in the list is displayed on the top.
+            </summary>
+            <param name="items">The list containing the stack of icons.</param>
+            <param name="classAttributes">The custom class attributes applied to the stack HTML tag (not the icons).</param>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStack.#ctor(System.Collections.Generic.IEnumerable{Mvc.RazorTools.FontAwesome.FontAwesomeIcon},System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Initializes a new instance of the Mvc.RazorTools.FontAwesome.FontAwesomeStack
+            object the specified list of items and the specified custom class 
+            attributes. The first icon in the list is displayed on the top.
+            </summary>
+            <param name="items">The list containing the stack of icons.</param>
+            <param name="classAttributes">The custom class attributes applied to the stack HTML tag (not the icons).</param>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.FontAwesomeStack.Create(Mvc.RazorTools.FontAwesome.FontAwesomeIcon[])">
+            <summary>
+            Creates a new instance of Mvc.RazorTools.FontAwesome.FontAwesomeStack with
+            the specified items.
+            </summary>
+            <param name="items">A List of Mvc.RazorTools.FontAwesome.FontAwesomeIcon items.</param>
+            <returns>A new Mvc.RazorTools.FontAwesome.FontAwesomeStack instance.</returns>
+        </member>
+        <member name="P:Mvc.RazorTools.FontAwesome.FontAwesomeStack.Items">
+            <summary>
+            Gets the list of stacked icons.
+            </summary>
+        </member>
+        <member name="T:Mvc.RazorTools.FontAwesome.HtmlExtensions">
+            <summary>
+            Provides a set of extension methods for the System.Web.Mvc.HtmlHelper class. These extension
+            methods are referenced in the razor view using the @Html keyword.
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.HtmlExtensions.FontAwesome(System.Web.Mvc.HtmlHelper,Mvc.RazorTools.FontAwesome.FontAwesomeIcon,System.String[])">
+            <summary>
+            Inserts the specified FontAwesomeIcon into the view.
+            </summary>
+            <param name="html">The view's current HtmlHelper instance.</param>
+            <param name="item">The icon to be displayed. This can be a custom instance or one of the
+            predefined icons in FontAwesomeIconSet (for example, to display the star icon use
+            FontAwesomeIconSet.Star).</param>
+            <param name="classAttributes">The custom attributes to be added to the icon.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.HtmlExtensions.FontAwesome(System.Web.Mvc.HtmlHelper,System.String,System.String[])">
+            <summary>
+            Inserts the specified FontAwesomeIcon into the view.
+            </summary>
+            <param name="html">The view's current HtmlHelper instance.</param>
+            <param name="item">The CSS class name of the icon to be displayed (for example, to display the star icon
+            use fa-star).</param>
+            <param name="classAttributes">The custom attributes to be added to the icon.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.HtmlExtensions.FontAwesomeStack(System.Web.Mvc.HtmlHelper,Mvc.RazorTools.FontAwesome.FontAwesomeStack,System.String[])">
+            <summary>
+            Insert the specified icon stack into the view.
+            </summary>
+            <param name="html">The view's current HtmlHelper instance.</param>
+            <param name="stack">The stack instance to display.</param>
+            <param name="classAttributes">The custom attributes to be added to the stack (not the icons).</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.HtmlExtensions.FontAwesomeStack(System.Web.Mvc.HtmlHelper,System.Collections.Generic.IEnumerable{Mvc.RazorTools.FontAwesome.FontAwesomeIcon},System.String[])">
+            <summary>
+            Insert the specified list of icons as a stack into the view.
+            </summary>
+            <param name="html">The view's current HtmlHelper instance.</param>
+            <param name="items">The list of icons to stack.</param>
+            <param name="classAttributes">The custom attributes to be added to the stack (not the icons).</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mvc.RazorTools.FontAwesome.HtmlExtensions.FontAwesomeStack(System.Web.Mvc.HtmlHelper,Mvc.RazorTools.FontAwesome.FontAwesomeIcon[])">
+            <summary>
+            Insert the specified list of icons as a stack into the view.
+            </summary>
+            <param name="html">The view's current HtmlHelper instance.</param>
+            <param name="items">The list of icons to stack.</param>
+            <param name="classAttributes">The custom attributes to be added to the stack (not the icons).</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

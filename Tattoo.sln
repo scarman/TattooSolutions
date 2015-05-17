@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tattoo.Common", "Tattoo.Common\Tattoo.Common.csproj", "{5354AD07-8F41-4434-B122-429476C947BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tattoo.Data", "Tattoo.Data\Tattoo.Data.csproj", "{1D11E8CC-5880-48BF-98D5-106EEEE7F0E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tattoo.Service", "Tattoo.Service\Tattoo.Service.csproj", "{7C5DBF54-FE63-43FC-B5F0-66E670B87063}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tattoo.Web", "Tattoo.Web\Tattoo.Web.csproj", "{AB56E649-F06F-4E8B-ACF6-15FAD6BE77A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tattoo.Web.Core", "Tattoo.Web.Core\Tattoo.Web.Core.csproj", "{B3BA8A31-6C98-4551-AE76-4B2A600FF263}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5354AD07-8F41-4434-B122-429476C947BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5354AD07-8F41-4434-B122-429476C947BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5354AD07-8F41-4434-B122-429476C947BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5354AD07-8F41-4434-B122-429476C947BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D11E8CC-5880-48BF-98D5-106EEEE7F0E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D11E8CC-5880-48BF-98D5-106EEEE7F0E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D11E8CC-5880-48BF-98D5-106EEEE7F0E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D11E8CC-5880-48BF-98D5-106EEEE7F0E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C5DBF54-FE63-43FC-B5F0-66E670B87063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C5DBF54-FE63-43FC-B5F0-66E670B87063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C5DBF54-FE63-43FC-B5F0-66E670B87063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C5DBF54-FE63-43FC-B5F0-66E670B87063}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB56E649-F06F-4E8B-ACF6-15FAD6BE77A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB56E649-F06F-4E8B-ACF6-15FAD6BE77A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB56E649-F06F-4E8B-ACF6-15FAD6BE77A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB56E649-F06F-4E8B-ACF6-15FAD6BE77A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3BA8A31-6C98-4551-AE76-4B2A600FF263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3BA8A31-6C98-4551-AE76-4B2A600FF263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3BA8A31-6C98-4551-AE76-4B2A600FF263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3BA8A31-6C98-4551-AE76-4B2A600FF263}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Social Tattoo & Piercing - @ViewBag.Title</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="author" content="Royal Work Company">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="application-name" content="">
+    <meta name="robots" content="index, follow, NOODP">
+    <meta name="Rating" content="General">
+    <meta name="Revisit-After" content="1 days">
+
+    <link rel="icon" href="~/favicon.ico" type="image/ico">
+    <link rel="shortcut icon" href="~/favicon.ico" type="image/ico">
+
+    @Styles.Render("~/styles/css")
+    @RenderSection("styles", required: false)
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+</head>
+<body>
+    @Html.Partial("_Navigator")
+
+    <div class="container body-content">
+        <section class="row">
+            <div class="col-md-12 slide-notice">Slide de Avisos</div>
+            <aside class="col-md-2">
+                @Html.Partial("_AsideLeft")
+            </aside>
+            <article class="col-md-10">
+                @RenderBody()
+            </article>
+        </section>
+        @Html.Partial("_Footer")
+    </div>
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

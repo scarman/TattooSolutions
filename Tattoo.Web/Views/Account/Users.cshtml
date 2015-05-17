@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Tattoo.Web.Models.UserInfoViewModel>
+@{
+    ViewBag.Title = "Users";
+}
+
+<h2>Users</h2>
+<hr />
+
+<div class="clearfix">
+    <div class="col-md-4 paddingless">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th><h4>Name</h4></th>
+                    <th><h4>Email</h4></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Email</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
